@@ -1,94 +1,133 @@
 "","Reporter.Country.Code","Reporter.Countries","totalExport"
-"1",231,"United States of America",65685230
-"2",68,"France",39996649
-"3",150,"Netherlands",36915938
-"4",79,"Germany",25865362
-"5",15,"Belgium-Luxembourg",18645799
-"6",106,"Italy",16555369
-"7",10,"Australia",15697164
-"8",229,"United Kingdom",15228467
-"9",203,"Spain",14832277
-"10",33,"Canada",14329234
-"11",21,"Brazil",14286642
-"12",41,"China, mainland",10368589
-"13",54,"Denmark",9808127
-"14",9,"Argentina",9641483
-"15",216,"Thailand",9471183
-"16",131,"Malaysia",7771583
-"17",104,"Ireland",7294626
-"18",156,"New Zealand",6652504
-"19",96,"China, Hong Kong SAR",5874270
-"20",101,"Indonesia",5868922
-"21",100,"India",5622686
-"22",200,"Singapore",4652490
-"23",223,"Turkey",4459922
-"24",84,"Greece",3595398
-"25",44,"Colombia",3164835
-"26",214,"China, Taiwan Province of",2762193
-"27",202,"South Africa",2626706
-"28",97,"Hungary",2551015
-"29",11,"Austria",2541633
-"30",40,"Chile",2533951
-"31",211,"Switzerland",2499261
-"32",173,"Poland",2385508
-"33",210,"Sweden",1788179
-"34",48,"Costa Rica",1773285
-"35",171,"Philippines",1741656
-"36",117,"Republic of Korea",1737084
-"37",58,"Ecuador",1623734
-"38",110,"Japan",1492145
-"39",174,"Portugal",1479042
-"40",165,"Pakistan",1385394
-"41",89,"Guatemala",1234970
-"42",114,"Kenya",1180931
-"43",181,"Zimbabwe",1160094
-"44",167,"Czechia",1151377
-"45",67,"Finland",1111632
-"46",234,"Uruguay",1100966
-"47",143,"Morocco",898610
-"48",38,"Sri Lanka",846553
-"49",50,"Cyprus",822517
-"50",169,"Paraguay",798318
-"51",183,"Romania",690356
-"52",32,"Cameroon",620026
-"53",170,"Peru",613345
-"54",226,"Uganda",519975
-"55",146,"Republic of Moldova",509951
-"56",186,"Serbia and Montenegro",507810
-"57",126,"Lithuania",506550
-"58",137,"Mauritius",501683
-"59",60,"El Salvador",500285
-"60",98,"Croatia",489517
-"61",95,"Honduras",482913
-"62",59,"Egypt",471227
-"63",162,"Norway",449494
-"64",236,"Venezuela (Bolivarian Republic of)",424622
-"65",168,"Papua New Guinea",365418
-"66",198,"Slovenia",361024
-"67",157,"Nicaragua",324462
-"68",222,"Tunisia",323675
-"69",19,"Bolivia (Plurinational State of)",298722
-"70",166,"Panama",290550
-"71",221,"Oman",221531
-"72",220,"Trinidad and Tobago",182138
-"73",112,"Jordan",161327
-"74",158,"Niger",142506
-"75",129,"Madagascar",135389
-"76",4,"Algeria",134662
-"77",217,"Togo",132090
-"78",23,"Belize",125736
-"79",20,"Botswana",110613
-"80",14,"Barbados",102832
-"81",118,"Kuwait",73503
-"82",133,"Mali",72734
-"83",128,"China, Macao SAR",42602
-"84",37,"Central African Republic",34058
-"85",3,"Albania",32625
-"86",233,"Burkina Faso",32146
-"87",90,"Guinea",28838
-"88",53,"Benin",28158
-"89",99,"Iceland",24498
-"90",64,"Faroe Islands",12966
-"91",184,"Rwanda",6317
-"92",45,"Comoros",5272
-"93",196,"Seychelles",1824
+"1",33,"Canada",14780761
+"2",231,"United States of America",13650245
+"3",138,"Mexico",11392993
+"4",9,"Argentina",5057844
+"5",106,"Italy",4130934
+"6",68,"France",4038885
+"7",21,"Brazil",3984529
+"8",150,"Netherlands",2832305
+"9",44,"Colombia",2765265
+"10",10,"Australia",2450678
+"11",229,"United Kingdom",2413013
+"12",101,"Indonesia",2338536
+"13",40,"Chile",2161614
+"14",41,"China, mainland",2089805
+"15",156,"New Zealand",1790204
+"16",11,"Austria",1748305
+"17",216,"Thailand",1715070
+"18",79,"Germany",1713046
+"19",203,"Spain",1422392
+"20",58,"Ecuador",1113066
+"21",48,"Costa Rica",1057413
+"22",100,"India",982751
+"23",131,"Malaysia",935654
+"24",169,"Paraguay",872937
+"25",234,"Uruguay",853355
+"26",170,"Peru",762549
+"27",89,"Guatemala",733811
+"28",255,"Belgium",724882
+"29",104,"Ireland",668566
+"30",54,"Denmark",642506
+"31",210,"Sweden",622560
+"32",171,"Philippines",615270
+"33",19,"Bolivia (Plurinational State of)",490747
+"34",107,"Côte d'Ivoire",475470
+"35",110,"Japan",421139
+"36",211,"Switzerland",393251
+"37",223,"Turkey",372279
+"38",117,"Republic of Korea",325908
+"39",95,"Honduras",305284
+"40",174,"Portugal",295855
+"41",202,"South Africa",278228
+"42",157,"Nicaragua",257089
+"43",84,"Greece",250336
+"44",173,"Poland",245430
+"45",214,"China, Taiwan Province of",205402
+"46",105,"Israel",183591
+"47",96,"China, Hong Kong SAR",176400
+"48",60,"El Salvador",153457
+"49",200,"Singapore",138592
+"50",166,"Panama",96924
+"51",236,"Venezuela (Bolivarian Republic of)",89697
+"52",162,"Norway",89183
+"53",220,"Trinidad and Tobago",85726
+"54",27,"Bulgaria",83816
+"55",143,"Morocco",76151
+"56",67,"Finland",74941
+"57",66,"Fiji",58631
+"58",114,"Kenya",54635
+"59",23,"Belize",53812
+"60",238,"Ethiopia",52320
+"61",212,"Syrian Arab Republic",49141
+"62",97,"Hungary",40005
+"63",165,"Pakistan",39963
+"64",119,"Latvia",34646
+"65",167,"Czechia",31688
+"66",230,"Ukraine",30894
+"67",59,"Egypt",30570
+"68",185,"Russian Federation",30365
+"69",22,"Aruba",29777
+"70",121,"Lebanon",27897
+"71",32,"Cameroon",25054
+"72",98,"Croatia",22751
+"73",14,"Barbados",21544
+"74",91,"Guyana",20599
+"75",181,"Zimbabwe",19955
+"76",137,"Mauritius",18872
+"77",129,"Madagascar",18260
+"78",215,"United Republic of Tanzania",17738
+"79",272,"Serbia",15428
+"80",133,"Mali",11826
+"81",70,"French Polynesia",10958
+"82",126,"Lithuania",9983
+"83",16,"Bangladesh",8895
+"84",183,"Romania",8203
+"85",146,"Republic of Moldova",7999
+"86",198,"Slovenia",7092
+"87",99,"Iceland",6886
+"88",226,"Uganda",6693
+"89",1,"Armenia",5880
+"90",154,"The former Yugoslav Republic of Macedonia",5654
+"91",12,"Bahamas",5250
+"92",195,"Senegal",4734
+"93",50,"Cyprus",4495
+"94",194,"Saudi Arabia",4349
+"95",73,"Georgia",4257
+"96",249,"Yemen",3858
+"97",112,"Jordan",3723
+"98",184,"Rwanda",3620
+"99",80,"Bosnia and Herzegovina",3237
+"100",3,"Albania",2712
+"101",63,"Estonia",2350
+"102",256,"Luxembourg",2092
+"103",199,"Slovakia",2047
+"104",52,"Azerbaijan",2015
+"105",158,"Niger",1946
+"106",57,"Belarus",1620
+"107",4,"Algeria",1450
+"108",86,"Grenada",1287
+"109",141,"Mongolia",1238
+"110",221,"Oman",1034
+"111",108,"Kazakhstan",973
+"112",55,"Dominica",870
+"113",189,"Saint Lucia",636
+"114",74,"Gabon",628
+"115",191,"Saint Vincent and the Grenadines",628
+"116",273,"Montenegro",612
+"117",179,"Qatar",583
+"118",251,"Zambia",471
+"119",128,"China, Macao SAR",458
+"120",206,"Sudan (former)",367
+"121",29,"Burundi",336
+"122",134,"Malta",291
+"123",209,"Eswatini",276
+"124",113,"Kyrgyzstan",240
+"125",196,"Seychelles",215
+"126",188,"Saint Kitts and Nevis",201
+"127",219,"Tonga",154
+"128",35,"Cabo Verde",102
+"129",25,"Solomon Islands",101
+"130",155,"Vanuatu",86
+"131",13,"Bahrain",53
+"132",153,"New Caledonia",23

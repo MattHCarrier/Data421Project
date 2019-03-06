@@ -1,0 +1,47 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+```{r}
+library(igraph)
+library(dplyr)
+library(sqldf)
+```
+
+
+```{r}
+edges1986<-read.csv("cleanedData/TradeEdges1986.csv")
+countryExport1986<-read.csv("cleanedData/TotalExport1986.csv")
+countryExport1986<-select(countryExport,Reporter.Country.Code,Reporter.Countries,totalExport)
+edges1986<-select(edges1986,Reporter.Country.Code,Partner.Country.Code)
+edges1986<-arrange(edges1986,Reporter.Country.Code)
+countryExport1986<-arrange(countryExport,Reporter.Country.Code)
+graph<-graph_from_data_frame(edges1986,directed = T,vertices = countryExport1986)
+plot(graph,vertex.label=V(graph)$Reporter.Countries)
+gorder(graph)
+```
+
+```{r}
+edges1996<-read.csv("cleanedData/TradeEdges1996.csv")
+countryExport1996<-read.csv("cleanedData/TotalExport1996.csv")
+countryExport1996<-select(countryExport1996,Reporter.Country.Code,Reporter.Countries,totalExport)
+edges1996<-select(edges1996,Reporter.Country.Code,Partner.Country.Code)
+edges1996<-arrange(edges1996,Reporter.Country.Code)
+countryExport1996<-arrange(countryExport1996,Reporter.Country.Code)
+graph<-graph_from_data_frame(edges1996,directed = T,vertices = countryExport1996)
+plot(graph,vertex.label=V(graph)$Reporter.Countries)
+gorder(graph)
+```
+```{r}
+edges2006<-read.csv("cleanedData/TradeEdges2006.csv")
+countryExport2006<-read.csv("cleanedData/TotalExport2006.csv")
+countryExport2006<-select(countryExport2006,Reporter.Country.Code,Reporter.Countries,totalExport)
+edges2006<-select(edges2006,Reporter.Country.Code,Partner.Country.Code)
+edges2006<-arrange(edges2006,Reporter.Country.Code)
+countryExport2006<-arrange(countryExport2006,Reporter.Country.Code)
+graph<-graph_from_data_frame(edges2006,directed = T,vertices = countryExport2006)
+plot(graph,vertex.label=V(graph)$Reporter.Countries)
+gorder(graph)
+```
+
+
