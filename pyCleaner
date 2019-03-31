@@ -1,0 +1,267 @@
+# coding=utf-8
+import csv
+import collections 
+pairs = []
+
+#add countries to list if they're pairing is unique
+def build(filename):
+	with open(filename, "rb") as csvfile:
+		print ("nope")
+		datareader = csv.reader(csvfile)
+		next(datareader)
+		for row in datareader:
+			tripl = [row[1], row[3]]
+			count = 0
+			try:
+				#calculate export value
+				value = float(row[11]) * 1000
+			except ValueError:
+				print(row[11])
+				#change year here depending on year you want
+			if row[7] == 'Export Value' and value > 0 and row[9] == '2016':
+				for x in pairs:
+					if row[1] in x and row [3] in x:
+						if row[1] == x[0]:
+							if x[2] is not None:
+								x[2] += value
+							count += 1
+							break
+				if count == 0:
+					yield row
+					
+
+
+Africa = ['Algeria', 
+'Benin',
+'Botswana',
+'Burkina Faso',
+'Burundi',
+'Cabo Verde',
+'Cameroon',
+'Central African Republic',
+'Comoros',
+'Congo',
+'Cote d\'Ivoire',
+'Democratic Republic of the Congo',
+'Djibouti',
+'Egypt',
+'Eswatini',
+'Ethiopia',
+'Ethiopia PDR',
+'Gabon',
+'Gambia',
+'Ghana',
+'Guinea',
+'Kenya',
+'Libya',
+'Madagascar',
+'Malawi',
+'Mali',
+'Mauritania',
+'Mauritius',
+'Morocco',
+'Namibia',
+'Niger',
+'Nigeria',
+'Rwanda',
+'Reunion',
+'Sao Tome and Principe',
+'Senegal',
+'Seychelles',
+'Sierra Leone',
+'South Africa',
+'Sudan (former)',
+'Togo',
+'Tunisia',
+'Uganda',
+'United Republic of Tanzania',
+'Zambia',
+'Zimbabwe']
+
+Americas= ['Antigua and Barbuda',
+'Argentina',
+'Aruba',
+'Bahamas',
+'Barbados',
+'Belize',
+'Bermuda',
+'Bolivia (Plurinational State of)',
+'Brazil',
+'Canada',
+'Chile',
+'Colombia',
+'Costa Rica',
+'Cuba',
+'Dominica',
+'Ecuador',
+'El Salvador',
+'French Guiana',
+'Greenland',
+'Grenada',
+'Guadeloupe',
+'Guatemala',
+'Guyana',
+'Honduras',
+'Jamaica',
+'Martinique',
+'Mexico',
+'Montserrat',
+'Netherlands Antilles (former)',
+'Nicaragua',
+'Panama',
+'Paraguay',
+'Peru',
+'Saint Kitts and Nevis',
+'Saint Lucia',
+'Saint Vincent and the Grenadines',
+'Suriname',
+'Trinidad and Tobago',
+'United States of America',
+'USA',
+'Uruguay',
+'Venezuela (Bolivarian Republic of)'
+]
+
+Oceania= ['Australia',
+'Cook Islands',
+'Fiji',
+'French Polynesia',
+'Kiribati',
+'New Caledonia',
+'New Zealand',
+'Papua New Guinea',
+'Solomon Islands',
+'Tonga',
+'Tuvalu',
+'Vanuatu']
+
+Asia=['Afghanistan',
+'Armenia',
+'Azerbaijan',
+'Bahrain',
+'Bangladesh',
+'Bhutan',
+'Brunei Darussalam',
+'Cambodia',
+'China, Hong Kong SAR',
+'China, Macao SAR',
+'China, mainland',
+'China, Taiwan Province of',
+'Cyprus',
+'Georgia',
+'India',
+'Indonesia',
+'Iran (Islamic Republic of)',
+'Israel',
+'Japan',
+'Jordan',
+'Kazakhstan',
+'Kuwait',
+'Kyrgyzstan',
+'Lebanon',
+'Malaysia',
+'Maldives',
+'Mongolia',
+'Nepal',
+'Oman',
+'Pakistan',
+'Philippines',
+'Qatar',
+'Republic of Korea',
+'Saudi Arabia',
+'Singapore',
+'Sri Lanka',
+'Syrian Arab Republic',
+'Thailand',
+'Turkey',
+'United Arab Emirates',
+'Yemen'
+]
+
+Europe=[
+'Albania',
+'Austria',
+'Belarus',
+'Belgium',
+'Belgium-Luxembourg',
+'Bosnia and Herzegovina',
+'Bulgaria',
+'Croatia',
+'Czechia',
+'Denmark',
+'Estonia',
+'Faroe Islands',
+'Finland',
+'France',
+'Germany',
+'Greece',
+'Hungary',
+'Iceland',
+'Ireland',
+'Italy',
+'Latvia',
+'Lithuania',
+'Luxembourg',
+'Malta',
+'Montenegro',
+'Netherlands',
+'Norway',
+'Poland',
+'Portugal',
+'Republic of Moldova',
+'Romania',
+'Russian Federation',
+'Serbia',
+'Serbia and Montengro',
+'Slovakia',
+'Slovenia',
+'Spain',
+'Sweden',
+'Switzerland',
+'The former Yugoslav Republic of Macedonia',
+'Ukraine',
+'United Kingdom',
+'USSR',
+'Yugoslav SFR'
+]
+
+
+
+
+
+
+for row in build("Trade_DetailedTradeMatrix_E_All_Data_(Normalized).csv"):
+	value = float(row[11]) * 1000
+
+	if row[1] == 'CÙte d\'Ivoire':
+		row[1] = 'Cote d\'Ivoire'
+
+	if row[1] == 'RÈunion':
+		row[1] = 'Reunion'
+
+	if row[1] in Europe:
+		region = 'Europe'
+	elif row[1] in Africa:
+		region = 'Africa'
+	elif row[1] in Asia:
+		region = 'Asia'
+	elif row[1] in Americas:
+		region = 'Americas'
+	elif row[1] in Oceania:
+		region = 'Oceania'
+	else:
+		region = 'Africa'
+
+	trip = [row[1], row[3], value, region]
+	pairs.append(trip)
+
+with open('output_data2016(regions).csv', mode='w') as csv_file: 
+	fieldnames = ['reporter', 'partner', 'weight', 'region']
+	writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
+
+	writer.writeheader()
+	for x in pairs:
+		writer.writerow({'reporter': x[0], 'partner': x[1], 'weight': x[2], 'region': x[3]})
+
+print("The end")
+print("\nFinally")
