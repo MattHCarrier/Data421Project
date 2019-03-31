@@ -4,85 +4,27 @@ output: html_notebook
 ---
 ```{r}
 library(igraph)
-library(dplyr)
-library(sqldf)
 ```
 
 
 ```{r}
-edges1986<-read.csv("cleanedData/TradeEdges1986.csv")
-countryExport1986<-read.csv("cleanedData/TotalExport1986.csv")
-countryExport1986<-select(countryExport1986,Reporter.Country.Code,Reporter.Countries,totalExport)
-edges1986<-select(edges1986,Reporter.Country.Code,Partner.Country.Code)
-edges1986<-arrange(edges1986,Reporter.Country.Code)
-countryExport1986<-arrange(countryExport1986,Reporter.Country.Code)
-graph1986<-graph_from_data_frame(edges1986,directed = T,vertices = countryExport1986)
-plot(graph1986,vertex.label=V(graph1986)$Reporter.Countries)
-gorder(graph1986)
+df86<-read.csv("output_data1986(regions).csv")
+df96<-read.csv("output_data1996(regions).csv")
+df06<-read.csv("output_data2006(regions).csv")
+df16<-read.csv("output_data2016(regions).csv")
 ```
 
 ```{r}
-edges1996<-read.csv("cleanedData/TradeEdges1996.csv")
-countryExport1996<-read.csv("cleanedData/TotalExport1996.csv")
-countryExport1996<-select(countryExport1996,Reporter.Country.Code,Reporter.Countries,totalExport)
-edges1996<-select(edges1996,Reporter.Country.Code,Partner.Country.Code)
-edges1996<-arrange(edges1996,Reporter.Country.Code)
-countryExport1996<-arrange(countryExport1996,Reporter.Country.Code)
-graph1996<-graph_from_data_frame(edges1996,directed = T,vertices = countryExport1996)
-plot(graph1996,vertex.label=V(graph1996)$Reporter.Countries)
-gorder(graph1996)
+g.new<-df86[which(df86$weight>10000000),]
+g<-graph_from_data_frame(g.new)
+head(df86)
 ```
-```{r}
-edges2006<-read.csv("cleanedData/TradeEdges2006.csv")
-countryExport2006<-read.csv("cleanedData/TotalExport2006.csv")
-countryExport2006<-select(countryExport2006,Reporter.Country.Code,Reporter.Countries,totalExport)
-edges2006<-select(edges2006,Reporter.Country.Code,Partner.Country.Code)
-edges2006<-arrange(edges2006,Reporter.Country.Code)
-edges2006
-countryExport2006<-arrange(countryExport2006,Reporter.Country.Code)
-graph2006<-graph_from_data_frame(edges2006,directed = T,vertices = countryExport2006)
-plot(graph2006,vertex.label=V(graph2006)$Reporter.Countries)
-gorder(graph2006)
-```
-checking top centrality/betweeness
-
 
 ```{r}
-Between1986<-betweenness(graph1986)
-countryExport1986$between1986<-Between1986
-topBetween<-countryExport1986[with(countryExport1986,order(-between1986)),]
-topBetween
-closeness1986<-closeness(graph1986)
-countryExport1986$closeness1986<-closeness1986
-topCloseness<-countryExport1986[with(countryExport1986,order(-closeness1986)),]
-topCloseness
-plot(countryExport1986$between1986,countryExport1986$totalExport)
-cor.test(countryExport1986$between1986,countryExport1986$totalExport)
-```
-```{r}
-Between1996<-betweenness(graph1996)
-countryExport1996$between1996<-Between1996
-topBetween1996<-countryExport1996[with(countryExport1996,order(-between1996)),]
-topBetween1996
-closeness1996<-closeness(graph1996)
-countryExport1996$closeness1996<-closeness1996
-topCloseness<-countryExport1996[with(countryExport1996,order(-closeness1996)),]
+rank<-page.rank(g)
+between86<-betweenness(g)
 
-plot(countryExport1996$between1996,countryExport1996$totalExport)
-cor(countryExport1996$between1996,countryExport1996$totalExport)
-cor.test(countryExport1996$between1996,countryExport1996$totalExport)
 ```
-```{r}
-Between2006<-betweenness(graph2006)
-countryExport2006$between2006<-Between2006
-topBetween2006<-countryExport2006[with(countryExport2006,order(-between2006)),]
-topBetween2006
-closeness2006<-closeness(graph2006)
-countryExport2006$closeness2006<-closeness2006
-topCloseness<-countryExport2006[with(countryExport2006,order(-closeness2006)),]
-plot(countryExport2006$between2006,countryExport2006$totalExport)
-cor(countryExport2006$between2006,countryExport2006$totalExport)
-cor.test(countryExport2006$between2006,countryExport2006$totalExport)
-```
+`
 
 
