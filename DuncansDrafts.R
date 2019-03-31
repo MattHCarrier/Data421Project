@@ -2,7 +2,7 @@ library (igraph)
 library(tcltk)
 library(visNetwork)
 library(magrittr)
-graph1986 <- read.csv("output_data1986.csv", header=T)
+graph1986 <- read.csv("output_data1986(regions).csv", header=T)
 Sgraph1986 <- graph_from_data_frame(graph1986)
 Sgraph1986 <- simplify(Sgraph1986)
 Cgraph1986 <- as.undirected(Sgraph1986, mode="collapse")
@@ -12,7 +12,7 @@ plot(Cgraph1986, rescale = FALSE,ylim=c(-5,6), xlim=c(-5,7))
 
 
 
-Relevant code below
+#Relevant code below
 
 df <- read.csv("output_data1986(regions).csv", header=T)
 regionsdf<-read.csv("regions.csv", header=T)
