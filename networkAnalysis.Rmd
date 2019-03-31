@@ -8,10 +8,10 @@ library(igraph)
 
 
 ```{r}
-df86<-read.csv("output_data1986(regions).csv")
-df96<-read.csv("output_data1996(regions).csv")
-df06<-read.csv("output_data2006(regions).csv")
-df16<-read.csv("output_data2016(regions).csv")
+df86<-read.csv("output_data1986(regions).csv",header = T)
+df96<-read.csv("output_data1996(regions).csv",header=T)
+df06<-read.csv("output_data2006(regions).csv",header=T)
+df16<-read.csv("output_data2016(regions).csv",header=T)
 ```
 
 ```{r}
@@ -72,3 +72,10 @@ ggplot(data=averageclose,aes(x=year,y=average)) +
   geom_bar(stat="identity") + ggtitle("Average closeness over four decades")
 ```
 This shows that over the decades countries have become more connected resulting in more direct trade patterns
+
+```{r}
+commun<-walktrap.community(g86)
+g86$community<-membership(commun)
+
+```
+

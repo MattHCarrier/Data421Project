@@ -1704,15 +1704,27 @@ $(document).ready(function () {
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShpZ3JhcGgpXG5gYGAifQ== -->
 <pre class="r"><code>library(igraph)</code></pre>
 <!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiXG5BdHRhY2hpbmcgcGFja2FnZTog4oCYaWdyYXBo4oCZXG5cblRoZSBmb2xsb3dpbmcgb2JqZWN0cyBhcmUgbWFza2VkIGZyb20g4oCYcGFja2FnZTpzdGF0c+KAmTpcblxuICAgIGRlY29tcG9zZSwgc3BlY3RydW1cblxuVGhlIGZvbGxvd2luZyBvYmplY3QgaXMgbWFza2VkIGZyb20g4oCYcGFja2FnZTpiYXNl4oCZOlxuXG4gICAgdW5pb25cbiJ9 -->
+<pre><code>
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZGY4NjwtcmVhZC5jc3YoXCJvdXRwdXRfZGF0YTE5ODYocmVnaW9ucykuY3N2XCIpXG5kZjk2PC1yZWFkLmNzdihcIm91dHB1dF9kYXRhMTk5NihyZWdpb25zKS5jc3ZcIilcbmRmMDY8LXJlYWQuY3N2KFwib3V0cHV0X2RhdGEyMDA2KHJlZ2lvbnMpLmNzdlwiKVxuZGYxNjwtcmVhZC5jc3YoXCJvdXRwdXRfZGF0YTIwMTYocmVnaW9ucykuY3N2XCIpXG5gYGAifQ== -->
-<pre class="r"><code>df86&lt;-read.csv(&quot;output_data1986(regions).csv&quot;)
-df96&lt;-read.csv(&quot;output_data1996(regions).csv&quot;)
-df06&lt;-read.csv(&quot;output_data2006(regions).csv&quot;)
-df16&lt;-read.csv(&quot;output_data2016(regions).csv&quot;)</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZGY4NjwtcmVhZC5jc3YoXCJvdXRwdXRfZGF0YTE5ODYocmVnaW9ucykuY3N2XCIsaGVhZGVyID0gVClcbmRmOTY8LXJlYWQuY3N2KFwib3V0cHV0X2RhdGExOTk2KHJlZ2lvbnMpLmNzdlwiLGhlYWRlcj1UKVxuZGYwNjwtcmVhZC5jc3YoXCJvdXRwdXRfZGF0YTIwMDYocmVnaW9ucykuY3N2XCIsaGVhZGVyPVQpXG5kZjE2PC1yZWFkLmNzdihcIm91dHB1dF9kYXRhMjAxNihyZWdpb25zKS5jc3ZcIixoZWFkZXI9VClcbmBgYCJ9 -->
+<pre class="r"><code>df86&lt;-read.csv(&quot;output_data1986(regions).csv&quot;,header = T)
+df96&lt;-read.csv(&quot;output_data1996(regions).csv&quot;,header=T)
+df06&lt;-read.csv(&quot;output_data2006(regions).csv&quot;,header=T)
+df16&lt;-read.csv(&quot;output_data2016(regions).csv&quot;,header=T)</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
@@ -1819,8 +1831,165 @@ ggplot(data=averageclose,aes(x=year,y=average)) +
 <!-- rnb-text-begin -->
 <p>This shows that over the decades countries have become more connected resulting in more direct trade patterns</p>
 <!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY29tbXVuPC13YWxrdHJhcC5jb21tdW5pdHkoZzg2KVxuZzg2JGNvbW11bml0eTwtbWVtYmVyc2hpcChjb21tdW4pXG5nODYkY29tbXVuaXR5XG5gYGAifQ== -->
+<pre class="r"><code>commun&lt;-walktrap.community(g86)
+g86$community&lt;-membership(commun)
+g86$community</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgQWxnZXJpYSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgQXJnZW50aW5hIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAxIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIEF1c3RyYWxpYSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBBdXN0cmlhIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAyIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgQmFuZ2xhZGVzaCAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIEJhcmJhZG9zIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAxIFxuICAgICAgICAgICAgICAgICAgIEJlbGdpdW0tTHV4ZW1ib3VyZyAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgQmVsaXplIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAxIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIEJyYXppbCAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIEJ1bGdhcmlhIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAzIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICBDYW1lcm9vbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgQ2FuYWRhIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAxIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBDaGlsZSAgICAgICAgICAgICAgICAgIENoaW5hLCBIb25nIEtvbmcgU0FSIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAxIFxuICAgICAgICAgICAgQ2hpbmEsIFRhaXdhbiBQcm92aW5jZSBvZiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIENvbG9tYmlhIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAxIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgQ29zdGEgUmljYSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBDdWJhIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAzIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIEN5cHJ1cyAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBEZW5tYXJrIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAxIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBFZ3lwdCAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBGaWppIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAyIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgRmlubGFuZCAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgRnJhbmNlIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAyIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIEdyZWVjZSAgICAgICAgICAgICAgICAgICAgICAgICAgICBHdWFkZWxvdXBlIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAyIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIEd1YXRlbWFsYSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIEhvbmR1cmFzIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAxIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgSHVuZ2FyeSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIEluZGlhIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMyAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAzIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIEluZG9uZXNpYSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBJcmVsYW5kIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAyIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIElzcmFlbCAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIEl0YWx5IFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAyIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgSmFtYWljYSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIEphcGFuIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAxIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIEpvcmRhbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIEtlbnlhIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAxIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIEt1d2FpdCAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgTWFsYXdpIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAyIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICBNYWxheXNpYSAgICAgICAgICAgICAgICAgICAgICAgICAgICBNYXJ0aW5pcXVlIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAyIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIE1leGljbyAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBNb3JvY2NvIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAyIFxuICAgICAgICAgICAgICAgICAgICAgICAgICBOZXRoZXJsYW5kcyAgICAgICAgIE5ldGhlcmxhbmRzIEFudGlsbGVzIChmb3JtZXIpIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAxIFxuICAgICAgICAgICAgICAgICAgICAgICAgICBOZXcgWmVhbGFuZCAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBOaWdlcmlhIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAyIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIE5vcndheSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBPbWFuIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAxIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFBhbmFtYSAgICAgICAgICAgICAgICAgICAgICBQYXB1YSBOZXcgR3VpbmVhIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAxIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICBQYXJhZ3VheSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBQZXJ1IFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAxIFxuICAgICAgICAgICAgICAgICAgICAgICAgICBQaGlsaXBwaW5lcyAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgUG9sYW5kIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAzIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICBQb3J0dWdhbCAgICAgICAgICAgICAgICAgICAgIFJlcHVibGljIG9mIEtvcmVhIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAxIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgUlxceGU5dW5pb24gICAgICAgICAgICAgICAgICAgICAgICAgIFNhdWRpIEFyYWJpYSBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDIgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMSBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFNlbmVnYWwgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFNpbmdhcG9yZSBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDMgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMSBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgU3BhaW4gICAgICAgICAgICAgICAgICAgICAgICAgICAgIFNyaSBMYW5rYSBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDIgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMSBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBTd2VkZW4gICAgICAgICAgICAgICAgICAgICAgICAgICBTd2l0emVybGFuZCBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDEgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMiBcbiAgICAgICAgICAgICAgICAgU3lyaWFuIEFyYWIgUmVwdWJsaWMgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBUaGFpbGFuZCBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDIgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMSBcbiAgICAgICAgICAgICAgICAgIFRyaW5pZGFkIGFuZCBUb2JhZ28gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFR1cmtleSBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDEgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMSBcbiAgICAgICAgICAgICAgICAgICAgICAgVW5pdGVkIEtpbmdkb20gICAgICAgICAgICAgIFVuaXRlZCBTdGF0ZXMgb2YgQW1lcmljYSBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDIgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMSBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFVydWd1YXkgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgVVNTUiBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDEgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMyBcbiAgIFZlbmV6dWVsYSAoQm9saXZhcmlhbiBSZXB1YmxpYyBvZikgICAgICAgICAgICAgICAgICAgICAgICAgIFl1Z29zbGF2IFNGUiBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDEgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMyBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgWmltYmFid2UgICAgICBCb2xpdmlhIChQbHVyaW5hdGlvbmFsIFN0YXRlIG9mKSBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDQgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMSBcbiAgICAgICAgICAgICAgICAgICAgICBDaGluYSwgbWFpbmxhbmQgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBEamlib3V0aSBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDEgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMiBcbiAgICAgICAgICAgSXJhbiAoSXNsYW1pYyBSZXB1YmxpYyBvZikgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgTGViYW5vbiBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDEgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMiBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgTGlieWEgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBQYWtpc3RhbiBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDIgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMSBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFJvbWFuaWEgICAgICAgICAgICAgICAgICAgICAgICAgIFNvdXRoIEFmcmljYSBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDMgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgNCBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFR1bmlzaWEgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgQmFocmFpbiBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDIgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMSBcbiAgICAgICAgICAgICAgICAgICAgICAgQ3plY2hvc2xvdmFraWEgRGVtb2NyYXRpYyBQZW9wbGUncyBSZXB1YmxpYyBvZiBLb3JlYSBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDMgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMyBcbiAgICAgICAgICAgICAgICAgICAgICAgICBFdGhpb3BpYSBQRFIgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgSXJhcSBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDEgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMSBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICBNYXVyaXRpdXMgICAgICAgICAgICAgICAgICAgICAgICAgTmV3IENhbGVkb25pYSBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDEgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMiBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgUWF0YXIgICAgICAgICAgICAgICAgICBVbml0ZWQgQXJhYiBFbWlyYXRlcyBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDIgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMSBcbiAgICAgICAgICAgICAgICAgICAgIFVuc3BlY2lmaWVkIEFyZWEgICAgICAgICAgICAgICAgICAgICAgICAgICBBZmdoYW5pc3RhbiBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDMgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMyBcbiAgICAgRGVtb2NyYXRpYyBSZXB1YmxpYyBvZiB0aGUgQ29uZ28gICAgICAgICAgICAgICAgICAgICAgRnJlbmNoIFBvbHluZXNpYSBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDIgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMiBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBHdWluZWEgICAgICAgICAgICAgICAgICAgICAgICBTdWRhbiAoZm9ybWVyKSBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDIgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMSBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBBbmdvbGEgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBHYWJvbiBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDEgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMiBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgUHVlcnRvIFJpY28gICAgICAgICAgICAgICAgICAgICAgQ2hpbmEsIE1hY2FvIFNBUiBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDUgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgNiBcbiAgICAgICAgICAgICAgICAgICAgICAgIEZhcm9lIElzbGFuZHMgICAgICAgICAgICAgICAgICAgICAgICAgICAgIEdyZWVubGFuZCBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDcgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgOCBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIEljZWxhbmQgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgQW5kb3JyYSBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDEgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMiBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgQmVuaW4gICAgICAgICAgICAgICAgICAgICAgICAgIEJ1cmtpbmEgRmFzbyBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDIgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgOSBcbiAgICAgICAgICAgICBDZW50cmFsIEFmcmljYW4gUmVwdWJsaWMgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBDb25nbyBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMTAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAxMSBcbiAgICAgICAgICAgICAgICAgICAgIENcXHhmNHRlIGQnSXZvaXJlICAgICAgICAgICAgICAgICAgICAgICAgIEZyZW5jaCBHdWlhbmEgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAyICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMTIgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBNYWxpICAgICAgICAgICAgICAgICAgICAgICAgICAgIE1hdXJpdGFuaWEgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAyICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDIgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIE5pZ2VyICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFRvZ28gXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDEzICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMTQgXG4gICAgICAgICAgICAgICAgICAgICAgICAgIEVsIFNhbHZhZG9yICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgTmVwYWwgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAxICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMTUgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgIFZpZXQgTmFtICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgTWFsdGEgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAzICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDIgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICBTb21hbGlhICAgICAgICAgICAgICAgICAgICAgQnJ1bmVpIERhcnVzc2FsYW0gXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAxICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDEgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICBMaWJlcmlhICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgQXJ1YmEgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAxICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMTYgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgR2FtYmlhICAgICAgICAgICAgICAgICAgICAgICAgICAgIE1hZGFnYXNjYXIgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDE3ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDEgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICBNb3phbWJpcXVlICAgICAgICAgICBVbml0ZWQgUmVwdWJsaWMgb2YgVGFuemFuaWEgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA0ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMTggXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgR2licmFsdGFyICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIEJhaGFtYXMgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDE5ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMjAgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICBCZXJtdWRhICAgICAgICAgICAgICAgICAgICAgICAgQ2F5bWFuIElzbGFuZHMgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDIxICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMjIgXG4gICAgICAgICAgICAgICAgICAgRG9taW5pY2FuIFJlcHVibGljICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIEVjdWFkb3IgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDIzICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMjQgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIEdoYW5hICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgSGFpdGkgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDI1ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMjYgXG4gICAgICBQYWNpZmljIElzbGFuZHMgVHJ1c3QgVGVycml0b3J5ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgU3VyaW5hbWUgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDI3ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMjggXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgWmFtYmlhICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgTW9uZ29saWEgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDI5ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMzAgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgIEJvdHN3YW5hIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAzMSBcbiJ9 -->
+<pre><code>                              Algeria                             Argentina 
+                                    1                                     1 
+                            Australia                               Austria 
+                                    1                                     2 
+                           Bangladesh                              Barbados 
+                                    1                                     1 
+                   Belgium-Luxembourg                                Belize 
+                                    2                                     1 
+                               Brazil                              Bulgaria 
+                                    1                                     3 
+                             Cameroon                                Canada 
+                                    2                                     1 
+                                Chile                  China, Hong Kong SAR 
+                                    1                                     1 
+            China, Taiwan Province of                              Colombia 
+                                    1                                     1 
+                           Costa Rica                                  Cuba 
+                                    1                                     3 
+                               Cyprus                               Denmark 
+                                    2                                     1 
+                                Egypt                                  Fiji 
+                                    1                                     2 
+                              Finland                                France 
+                                    1                                     2 
+                               Greece                            Guadeloupe 
+                                    2                                     2 
+                            Guatemala                              Honduras 
+                                    1                                     1 
+                              Hungary                                 India 
+                                    3                                     3 
+                            Indonesia                               Ireland 
+                                    1                                     2 
+                               Israel                                 Italy 
+                                    1                                     2 
+                              Jamaica                                 Japan 
+                                    1                                     1 
+                               Jordan                                 Kenya 
+                                    1                                     1 
+                               Kuwait                                Malawi 
+                                    1                                     2 
+                             Malaysia                            Martinique 
+                                    1                                     2 
+                               Mexico                               Morocco 
+                                    1                                     2 
+                          Netherlands         Netherlands Antilles (former) 
+                                    2                                     1 
+                          New Zealand                               Nigeria 
+                                    1                                     2 
+                               Norway                                  Oman 
+                                    1                                     1 
+                               Panama                      Papua New Guinea 
+                                    1                                     1 
+                             Paraguay                                  Peru 
+                                    1                                     1 
+                          Philippines                                Poland 
+                                    1                                     3 
+                             Portugal                     Republic of Korea 
+                                    1                                     1 
+                           R\xe9union                          Saudi Arabia 
+                                    2                                     1 
+                              Senegal                             Singapore 
+                                    3                                     1 
+                                Spain                             Sri Lanka 
+                                    2                                     1 
+                               Sweden                           Switzerland 
+                                    1                                     2 
+                 Syrian Arab Republic                              Thailand 
+                                    2                                     1 
+                  Trinidad and Tobago                                Turkey 
+                                    1                                     1 
+                       United Kingdom              United States of America 
+                                    2                                     1 
+                              Uruguay                                  USSR 
+                                    1                                     3 
+   Venezuela (Bolivarian Republic of)                          Yugoslav SFR 
+                                    1                                     3 
+                             Zimbabwe      Bolivia (Plurinational State of) 
+                                    4                                     1 
+                      China, mainland                              Djibouti 
+                                    1                                     2 
+           Iran (Islamic Republic of)                               Lebanon 
+                                    1                                     2 
+                                Libya                              Pakistan 
+                                    2                                     1 
+                              Romania                          South Africa 
+                                    3                                     4 
+                              Tunisia                               Bahrain 
+                                    2                                     1 
+                       Czechoslovakia Democratic People's Republic of Korea 
+                                    3                                     3 
+                         Ethiopia PDR                                  Iraq 
+                                    1                                     1 
+                            Mauritius                         New Caledonia 
+                                    1                                     2 
+                                Qatar                  United Arab Emirates 
+                                    2                                     1 
+                     Unspecified Area                           Afghanistan 
+                                    3                                     3 
+     Democratic Republic of the Congo                      French Polynesia 
+                                    2                                     2 
+                               Guinea                        Sudan (former) 
+                                    2                                     1 
+                               Angola                                 Gabon 
+                                    1                                     2 
+                          Puerto Rico                      China, Macao SAR 
+                                    5                                     6 
+                        Faroe Islands                             Greenland 
+                                    7                                     8 
+                              Iceland                               Andorra 
+                                    1                                     2 
+                                Benin                          Burkina Faso 
+                                    2                                     9 
+             Central African Republic                                 Congo 
+                                   10                                    11 
+                     C\xf4te d'Ivoire                         French Guiana 
+                                    2                                    12 
+                                 Mali                            Mauritania 
+                                    2                                     2 
+                                Niger                                  Togo 
+                                   13                                    14 
+                          El Salvador                                 Nepal 
+                                    1                                    15 
+                             Viet Nam                                 Malta 
+                                    3                                     2 
+                              Somalia                     Brunei Darussalam 
+                                    1                                     1 
+                              Liberia                                 Aruba 
+                                    1                                    16 
+                               Gambia                            Madagascar 
+                                   17                                     1 
+                           Mozambique           United Republic of Tanzania 
+                                    4                                    18 
+                            Gibraltar                               Bahamas 
+                                   19                                    20 
+                              Bermuda                        Cayman Islands 
+                                   21                                    22 
+                   Dominican Republic                               Ecuador 
+                                   23                                    24 
+                                Ghana                                 Haiti 
+                                   25                                    26 
+      Pacific Islands Trust Territory                              Suriname 
+                                   27                                    28 
+                               Zambia                              Mongolia 
+                                   29                                    30 
+                             Botswana 
+                                   31 </code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiUiBOb3RlYm9vayIKb3V0cHV0OiBodG1sX25vdGVib29rCi0tLQpgYGB7cn0KbGlicmFyeShpZ3JhcGgpCmBgYAoKCmBgYHtyfQpkZjg2PC1yZWFkLmNzdigib3V0cHV0X2RhdGExOTg2KHJlZ2lvbnMpLmNzdiIpCmRmOTY8LXJlYWQuY3N2KCJvdXRwdXRfZGF0YTE5OTYocmVnaW9ucykuY3N2IikKZGYwNjwtcmVhZC5jc3YoIm91dHB1dF9kYXRhMjAwNihyZWdpb25zKS5jc3YiKQpkZjE2PC1yZWFkLmNzdigib3V0cHV0X2RhdGEyMDE2KHJlZ2lvbnMpLmNzdiIpCmBgYAoKYGBge3J9CmcuODY8LWRmODZbd2hpY2goZGY4NiR3ZWlnaHQ+MTAwMDAwMDApLF0KZzg2PC1ncmFwaF9mcm9tX2RhdGFfZnJhbWUoZy44NikKZy45NjwtZGY5Nlt3aGljaChkZjk2JHdlaWdodD4xMDAwMDAwMCksXQpnOTY8LWdyYXBoX2Zyb21fZGF0YV9mcmFtZShnLjk2KQpnLjA2PC1kZjA2W3doaWNoKGRmMDYkd2VpZ2h0PjEwMDAwMDAwKSxdCmcwNjwtZ3JhcGhfZnJvbV9kYXRhX2ZyYW1lKGcuMDYpCmcuMTY8LWRmMTZbd2hpY2goZGYxNiR3ZWlnaHQ+MTAwMDAwMDApLF0KZzE2PC1ncmFwaF9mcm9tX2RhdGFfZnJhbWUoZy4xNikKCmBgYAoKYGBge3J9CmJldHdlZW44NjwtYmV0d2Vlbm5lc3MoZzg2KQojYmV0d2Vlbjg2CmJldHdlZW45NjwtYmV0d2Vlbm5lc3MoZzk2KQojYmV0d2Vlbjk2CmJldHdlZW4wNjwtYmV0d2Vlbm5lc3MoZzA2KQojYmV0d2VlbjA2CmJldHdlZW4xNjwtYmV0d2Vlbm5lc3MoZzE2KQojYmV0d2VlbjE2CngxPC1tZWFuKHVubmFtZShiZXR3ZWVuODYpKQp4MjwtbWVhbih1bm5hbWUoYmV0d2Vlbjk2KSkKeDM8LW1lYW4odW5uYW1lKGJldHdlZW4wNikpCng0PC1tZWFuKHVubmFtZShiZXR3ZWVuMTYpKQp4MQphdmVyYWdlQmV0d2VlbjwtZGF0YS5mcmFtZShhdmVyYWdlPWMoeDEseDIseDMseDQpLHllYXI9YygiMTk4NiIsIjE5OTYiLCIyMDA2IiwiMjAxNiIpKQpgYGAKYGBge3J9CmxpYnJhcnkoZ2dwbG90MikKZ2dwbG90KGRhdGE9YXZlcmFnZUJldHdlZW4sYWVzKHg9eWVhcix5PWF2ZXJhZ2UpKSArCiAgZ2VvbV9iYXIoc3RhdD0iaWRlbnRpdHkiKSArIGdndGl0bGUoIkF2ZXJhZ2UgYmV0d2Vlbm5lc3Mgb3ZlciBmb3VyIGRlY2FkZXMiKQpgYGAKClRoaXMgc3VnZ2VzdHMgdGhhdCBhcyB0aGUgeWVhcnMgaGF2ZSBwcm9ncmVzc2VkIG1vcmUgY291bnRyaWVzIGhhdmUgZGV2bG9wZWQgaGlnaGVyIGJldHdlZW5lc3MgcmVzdWx0aW5nIGluIG1vcmUgZGVmaW5lZCB0cmFkZSBwYXR0ZXJucy4oaS5lIGEgaGFuZGZ1bCBvZiBjb3VudHJpZXMgdmVyeSBsb3cgYmV0d2VlbmVzcyBtZWFucyB0aGV5IGFyZSByZW1vdmVkIGZyb20gdHJhZGluZyBidXQgc2luY2UgdGhlIGF2ZXJhZ2UgYXMgaW5jcmVhc2VkIG92ZXIgdGhlIHllYXJzIGl0IGlzIHN1Z2dlc3RpbmcgdGhhdCBjb3VudHJpZXMgYXJlIGJlY29taW5nIG1vcmUgaW52b3ZsZWQgaW4gdHJhZGluZyhlbmZvcmNlcyBnbG9iYWxpemF0aW9uKSApCmBgYHtyfQpjbG9zZTg2PC1jbG9zZW5lc3MoZzg2KQojYmV0d2Vlbjg2CmNsb3NlOTY8LWNsb3NlbmVzcyhnOTYpCiNiZXR3ZWVuOTYKY2xvc2UwNjwtY2xvc2VuZXNzKGcwNikKI2JldHdlZW4wNgpjbG9zZTE2PC1jbG9zZW5lc3MoZzE2KQojYmV0d2VlbjE2CnkxPC1tZWFuKHVubmFtZShjbG9zZTg2KSkKeTI8LW1lYW4odW5uYW1lKGNsb3NlOTYpKQp5MzwtbWVhbih1bm5hbWUoY2xvc2UwNikpCnk0PC1tZWFuKHVubmFtZShjbG9zZTE2KSkKYXZlcmFnZWNsb3NlPC1kYXRhLmZyYW1lKGF2ZXJhZ2U9Yyh5MSx5Mix5Myx5NCkseWVhcj1jKCIxOTg2IiwiMTk5NiIsIjIwMDYiLCIyMDE2IikpCmBgYAoKCmBgYHtyfQpsaWJyYXJ5KGdncGxvdDIpCmdncGxvdChkYXRhPWF2ZXJhZ2VjbG9zZSxhZXMoeD15ZWFyLHk9YXZlcmFnZSkpICsKICBnZW9tX2JhcihzdGF0PSJpZGVudGl0eSIpICsgZ2d0aXRsZSgiQXZlcmFnZSBjbG9zZW5lc3Mgb3ZlciBmb3VyIGRlY2FkZXMiKQpgYGAKVGhpcyBzaG93cyB0aGF0IG92ZXIgdGhlIGRlY2FkZXMgY291bnRyaWVzIGhhdmUgYmVjb21lIG1vcmUgY29ubmVjdGVkIHJlc3VsdGluZyBpbiBtb3JlIGRpcmVjdCB0cmFkZSBwYXR0ZXJucwo=</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiUiBOb3RlYm9vayIKb3V0cHV0OiBodG1sX25vdGVib29rCi0tLQpgYGB7cn0KbGlicmFyeShpZ3JhcGgpCmBgYAoKCmBgYHtyfQpkZjg2PC1yZWFkLmNzdigib3V0cHV0X2RhdGExOTg2KHJlZ2lvbnMpLmNzdiIsaGVhZGVyID0gVCkKZGY5NjwtcmVhZC5jc3YoIm91dHB1dF9kYXRhMTk5NihyZWdpb25zKS5jc3YiLGhlYWRlcj1UKQpkZjA2PC1yZWFkLmNzdigib3V0cHV0X2RhdGEyMDA2KHJlZ2lvbnMpLmNzdiIsaGVhZGVyPVQpCmRmMTY8LXJlYWQuY3N2KCJvdXRwdXRfZGF0YTIwMTYocmVnaW9ucykuY3N2IixoZWFkZXI9VCkKYGBgCgpgYGB7cn0KZy44NjwtZGY4Nlt3aGljaChkZjg2JHdlaWdodD4xMDAwMDAwMCksXQpnODY8LWdyYXBoX2Zyb21fZGF0YV9mcmFtZShnLjg2KQpnLjk2PC1kZjk2W3doaWNoKGRmOTYkd2VpZ2h0PjEwMDAwMDAwKSxdCmc5NjwtZ3JhcGhfZnJvbV9kYXRhX2ZyYW1lKGcuOTYpCmcuMDY8LWRmMDZbd2hpY2goZGYwNiR3ZWlnaHQ+MTAwMDAwMDApLF0KZzA2PC1ncmFwaF9mcm9tX2RhdGFfZnJhbWUoZy4wNikKZy4xNjwtZGYxNlt3aGljaChkZjE2JHdlaWdodD4xMDAwMDAwMCksXQpnMTY8LWdyYXBoX2Zyb21fZGF0YV9mcmFtZShnLjE2KQoKYGBgCgpgYGB7cn0KYmV0d2Vlbjg2PC1iZXR3ZWVubmVzcyhnODYpCiNiZXR3ZWVuODYKYmV0d2Vlbjk2PC1iZXR3ZWVubmVzcyhnOTYpCiNiZXR3ZWVuOTYKYmV0d2VlbjA2PC1iZXR3ZWVubmVzcyhnMDYpCiNiZXR3ZWVuMDYKYmV0d2VlbjE2PC1iZXR3ZWVubmVzcyhnMTYpCiNiZXR3ZWVuMTYKeDE8LW1lYW4odW5uYW1lKGJldHdlZW44NikpCngyPC1tZWFuKHVubmFtZShiZXR3ZWVuOTYpKQp4MzwtbWVhbih1bm5hbWUoYmV0d2VlbjA2KSkKeDQ8LW1lYW4odW5uYW1lKGJldHdlZW4xNikpCngxCmF2ZXJhZ2VCZXR3ZWVuPC1kYXRhLmZyYW1lKGF2ZXJhZ2U9Yyh4MSx4Mix4Myx4NCkseWVhcj1jKCIxOTg2IiwiMTk5NiIsIjIwMDYiLCIyMDE2IikpCmBgYApgYGB7cn0KbGlicmFyeShnZ3Bsb3QyKQpnZ3Bsb3QoZGF0YT1hdmVyYWdlQmV0d2VlbixhZXMoeD15ZWFyLHk9YXZlcmFnZSkpICsKICBnZW9tX2JhcihzdGF0PSJpZGVudGl0eSIpICsgZ2d0aXRsZSgiQXZlcmFnZSBiZXR3ZWVubmVzcyBvdmVyIGZvdXIgZGVjYWRlcyIpCmBgYAoKVGhpcyBzdWdnZXN0cyB0aGF0IGFzIHRoZSB5ZWFycyBoYXZlIHByb2dyZXNzZWQgbW9yZSBjb3VudHJpZXMgaGF2ZSBkZXZsb3BlZCBoaWdoZXIgYmV0d2VlbmVzcyByZXN1bHRpbmcgaW4gbW9yZSBkZWZpbmVkIHRyYWRlIHBhdHRlcm5zLihpLmUgYSBoYW5kZnVsIG9mIGNvdW50cmllcyB2ZXJ5IGxvdyBiZXR3ZWVuZXNzIG1lYW5zIHRoZXkgYXJlIHJlbW92ZWQgZnJvbSB0cmFkaW5nIGJ1dCBzaW5jZSB0aGUgYXZlcmFnZSBhcyBpbmNyZWFzZWQgb3ZlciB0aGUgeWVhcnMgaXQgaXMgc3VnZ2VzdGluZyB0aGF0IGNvdW50cmllcyBhcmUgYmVjb21pbmcgbW9yZSBpbnZvdmxlZCBpbiB0cmFkaW5nKGVuZm9yY2VzIGdsb2JhbGl6YXRpb24pICkKYGBge3J9CmNsb3NlODY8LWNsb3NlbmVzcyhnODYpCiNiZXR3ZWVuODYKY2xvc2U5NjwtY2xvc2VuZXNzKGc5NikKI2JldHdlZW45NgpjbG9zZTA2PC1jbG9zZW5lc3MoZzA2KQojYmV0d2VlbjA2CmNsb3NlMTY8LWNsb3NlbmVzcyhnMTYpCiNiZXR3ZWVuMTYKeTE8LW1lYW4odW5uYW1lKGNsb3NlODYpKQp5MjwtbWVhbih1bm5hbWUoY2xvc2U5NikpCnkzPC1tZWFuKHVubmFtZShjbG9zZTA2KSkKeTQ8LW1lYW4odW5uYW1lKGNsb3NlMTYpKQphdmVyYWdlY2xvc2U8LWRhdGEuZnJhbWUoYXZlcmFnZT1jKHkxLHkyLHkzLHk0KSx5ZWFyPWMoIjE5ODYiLCIxOTk2IiwiMjAwNiIsIjIwMTYiKSkKYGBgCgoKYGBge3J9CmxpYnJhcnkoZ2dwbG90MikKZ2dwbG90KGRhdGE9YXZlcmFnZWNsb3NlLGFlcyh4PXllYXIseT1hdmVyYWdlKSkgKwogIGdlb21fYmFyKHN0YXQ9ImlkZW50aXR5IikgKyBnZ3RpdGxlKCJBdmVyYWdlIGNsb3NlbmVzcyBvdmVyIGZvdXIgZGVjYWRlcyIpCmBgYApUaGlzIHNob3dzIHRoYXQgb3ZlciB0aGUgZGVjYWRlcyBjb3VudHJpZXMgaGF2ZSBiZWNvbWUgbW9yZSBjb25uZWN0ZWQgcmVzdWx0aW5nIGluIG1vcmUgZGlyZWN0IHRyYWRlIHBhdHRlcm5zCgpgYGB7cn0KY29tbXVuPC13YWxrdHJhcC5jb21tdW5pdHkoZzg2KQpnODYkY29tbXVuaXR5PC1tZW1iZXJzaGlwKGNvbW11bikKCmBgYAoK</div>
 
 
 
