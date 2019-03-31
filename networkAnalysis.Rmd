@@ -15,16 +15,60 @@ df16<-read.csv("output_data2016(regions).csv")
 ```
 
 ```{r}
-g.new<-df86[which(df86$weight>10000000),]
-g<-graph_from_data_frame(g.new)
-head(df86)
+g.86<-df86[which(df86$weight>10000000),]
+g86<-graph_from_data_frame(g.86)
+g.96<-df96[which(df96$weight>10000000),]
+g96<-graph_from_data_frame(g.96)
+g.06<-df06[which(df06$weight>10000000),]
+g06<-graph_from_data_frame(g.06)
+g.16<-df16[which(df16$weight>10000000),]
+g16<-graph_from_data_frame(g.16)
+
 ```
 
 ```{r}
-rank<-page.rank(g)
-between86<-betweenness(g)
-
+between86<-betweenness(g86)
+#between86
+between96<-betweenness(g96)
+#between96
+between06<-betweenness(g06)
+#between06
+between16<-betweenness(g16)
+#between16
+x1<-mean(unname(between86))
+x2<-mean(unname(between96))
+x3<-mean(unname(between06))
+x4<-mean(unname(between16))
+x1
+averageBetween<-data.frame(average=c(x1,x2,x3,x4),year=c("1986","1996","2006","2016"))
 ```
-`
+```{r}
+library(ggplot2)
+ggplot(data=averageBetween,aes(x=year,y=average)) +
+  geom_bar(stat="identity") + ggtitle("Average betweenness over four decades")
+```
+
+This suggests that as the years have progressed more countries have devloped higher betweeness resulting in more defined trade patterns.(i.e a handful of countries very low betweeness means they are removed from trading but since the average as increased over the years it is suggesting that countries are becoming more invovled in trading(enforces globalization) )
+```{r}
+close86<-closeness(g86)
+#between86
+close96<-closeness(g96)
+#between96
+close06<-closeness(g06)
+#between06
+close16<-closeness(g16)
+#between16
+y1<-mean(unname(close86))
+y2<-mean(unname(close96))
+y3<-mean(unname(close06))
+y4<-mean(unname(close16))
+averageclose<-data.frame(average=c(y1,y2,y3,y4),year=c("1986","1996","2006","2016"))
+```
 
 
+```{r}
+library(ggplot2)
+ggplot(data=averageclose,aes(x=year,y=average)) +
+  geom_bar(stat="identity") + ggtitle("Average closeness over four decades")
+```
+This shows that over the decades countries have become more connected resulting in more direct trade patterns
