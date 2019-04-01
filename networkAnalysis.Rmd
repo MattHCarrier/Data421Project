@@ -29,17 +29,28 @@ g16<-graph_from_data_frame(g.16)
 ```{r}
 between86<-betweenness(g86)
 #between86
+col86<-data.frame(unname(between86))
+count86<-apply(col86,2,function(c)sum(c==0))
+count86
 between96<-betweenness(g96)
 #between96
+col96<-data.frame(unname(between96))
+count96<-apply(col96,2,function(c)sum(c==0))
+count96
 between06<-betweenness(g06)
 #between06
+col06<-data.frame(unname(between06))
+count06<-apply(col06,2,function(c)sum(c==0))
+count06
 between16<-betweenness(g16)
 #between16
+col16<-data.frame(unname(between16))
+count16<-apply(col16,2,function(c)sum(c==0))
+count16
 x1<-mean(unname(between86))
 x2<-mean(unname(between96))
 x3<-mean(unname(between06))
 x4<-mean(unname(between16))
-x1
 averageBetween<-data.frame(average=c(x1,x2,x3,x4),year=c("1986","1996","2006","2016"))
 ```
 ```{r}
@@ -67,15 +78,46 @@ averageclose<-data.frame(average=c(y1,y2,y3,y4),year=c("1986","1996","2006","201
 
 
 ```{r}
-library(ggplot2)
 ggplot(data=averageclose,aes(x=year,y=average)) +
   geom_bar(stat="identity") + ggtitle("Average closeness over four decades")
 ```
 This shows that over the decades countries have become more connected resulting in more direct trade patterns
 
 ```{r}
-commun<-walktrap.community(g86)
-g86$community<-membership(commun)
+rank86<-page.rank(g86)
+#between86
+rank96<-page.rank(g96)
+#between96
+rank06<-page.rank(g06)
+#between06
+rank16<-page.rank(g16)
+#between16
+
+z1<-mean(unname(rank86$vector))
+z2<-mean(unname(rank96$vector))
+z3<-mean(unname(rank06$vector))
+z4<-mean(unname(rank16$vector))
+averageRank<-data.frame(average=c(z1,z2,z3,z4),year=c("1986","1996","2006","2016"))
+```
+```{r}
+ggplot(data=averageRank,aes(x=year,y=average)) +
+  geom_bar(stat="identity") + ggtitle("Average page rank over four decades")
+```
+```{r}
+wc86<-walktrap.community(g86,steps = 20)
+wc96<-walktrap.community(g96,steps=20)
+wc06<-walktrap.community(g06,steps=20)
+wc16<-walktrap.community(g16,steps = 20)
+sizes(wc86)
+sizes(wc96)
+sizes(wc06)
+sizes(wc16)
+
+```
+
+```{r}
+g86$community<-membership(wc86)
+g86$community
 
 ```
 

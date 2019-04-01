@@ -1620,9 +1620,6 @@ img {
 .tabbed-pane {
   padding-top: 12px;
 }
-.html-widget {
-  margin-bottom: 20px;
-}
 button.code-folding-btn:focus {
   outline: none;
 }
@@ -1730,6 +1727,130 @@ df16&lt;-read.csv(&quot;output_data2016(regions).csv&quot;,header=T)</code></pre
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZGY4NiRyZWdpb25cbmBgYCJ9 -->
+<pre class="r"><code>df86$region</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiICAgWzFdIEFmcmljYSAgIEFmcmljYSAgIEFmcmljYSAgIEFmcmljYSAgIEFmcmljYSAgIEFmcmljYSAgIEFmcmljYSAgIEFmcmljYSAgIEFmcmljYSAgIEFmcmljYSAgIEFmcmljYSAgXG4gIFsxMl0gQWZyaWNhICAgQWZyaWNhICAgQWZyaWNhICAgQWZyaWNhICAgQWZyaWNhICAgQWZyaWNhICAgQWZyaWNhICAgQWZyaWNhICAgQWZyaWNhICAgQWZyaWNhICAgQWZyaWNhICBcbiAgWzIzXSBBZnJpY2EgICBBbWVyaWNhcyBBbWVyaWNhcyBBbWVyaWNhcyBBbWVyaWNhcyBBbWVyaWNhcyBBbWVyaWNhcyBBbWVyaWNhcyBBbWVyaWNhcyBBbWVyaWNhcyBBbWVyaWNhc1xuICBbMzRdIEFtZXJpY2FzIEFtZXJpY2FzIEFtZXJpY2FzIEFtZXJpY2FzIEFtZXJpY2FzIEFtZXJpY2FzIEFtZXJpY2FzIEFtZXJpY2FzIEFtZXJpY2FzIEFtZXJpY2FzIEFtZXJpY2FzXG4gIFs0NV0gQW1lcmljYXMgQW1lcmljYXMgQW1lcmljYXMgQW1lcmljYXMgQW1lcmljYXMgQW1lcmljYXMgQW1lcmljYXMgQW1lcmljYXMgQW1lcmljYXMgQW1lcmljYXMgQW1lcmljYXNcbiAgWzU2XSBBbWVyaWNhcyBBbWVyaWNhcyBBbWVyaWNhcyBBbWVyaWNhcyBBbWVyaWNhcyBBbWVyaWNhcyBBbWVyaWNhcyBBbWVyaWNhcyBBbWVyaWNhcyBBbWVyaWNhcyBBbWVyaWNhc1xuICBbNjddIEFtZXJpY2FzIEFtZXJpY2FzIEFtZXJpY2FzIEFtZXJpY2FzIEFtZXJpY2FzIEFtZXJpY2FzIEFtZXJpY2FzIEFtZXJpY2FzIEFtZXJpY2FzIEFtZXJpY2FzIEFtZXJpY2FzXG4gIFs3OF0gQW1lcmljYXMgQW1lcmljYXMgQW1lcmljYXMgQW1lcmljYXMgQW1lcmljYXMgQW1lcmljYXMgQW1lcmljYXMgQW1lcmljYXMgQW1lcmljYXMgQW1lcmljYXMgQW1lcmljYXNcbiAgWzg5XSBBbWVyaWNhcyBBbWVyaWNhcyBBbWVyaWNhcyBBbWVyaWNhcyBBbWVyaWNhcyBBbWVyaWNhcyBBbWVyaWNhcyBBbWVyaWNhcyBBbWVyaWNhcyBBbWVyaWNhcyBBbWVyaWNhc1xuIFsxMDBdIEFtZXJpY2FzIEFtZXJpY2FzIEFtZXJpY2FzIEFtZXJpY2FzIEFtZXJpY2FzIEFtZXJpY2FzIEFtZXJpY2FzIEFtZXJpY2FzIEFtZXJpY2FzIEFtZXJpY2FzIEFtZXJpY2FzXG4gWzExMV0gQW1lcmljYXMgQW1lcmljYXMgQW1lcmljYXMgQW1lcmljYXMgQW1lcmljYXMgQW1lcmljYXMgQW1lcmljYXMgQW1lcmljYXMgQW1lcmljYXMgQW1lcmljYXMgQW1lcmljYXNcbiBbMTIyXSBBbWVyaWNhcyBBbWVyaWNhcyBBbWVyaWNhcyBBbWVyaWNhcyBBbWVyaWNhcyBBbWVyaWNhcyBBbWVyaWNhcyBBbWVyaWNhcyBBbWVyaWNhcyBBbWVyaWNhcyBBbWVyaWNhc1xuIFsxMzNdIEFtZXJpY2FzIEFtZXJpY2FzIEFtZXJpY2FzIE9jZWFuaWEgIE9jZWFuaWEgIE9jZWFuaWEgIE9jZWFuaWEgIE9jZWFuaWEgIE9jZWFuaWEgIE9jZWFuaWEgIE9jZWFuaWEgXG4gWzE0NF0gT2NlYW5pYSAgT2NlYW5pYSAgT2NlYW5pYSAgT2NlYW5pYSAgT2NlYW5pYSAgT2NlYW5pYSAgT2NlYW5pYSAgT2NlYW5pYSAgT2NlYW5pYSAgT2NlYW5pYSAgT2NlYW5pYSBcbiBbMTU1XSBPY2VhbmlhICBPY2VhbmlhICBPY2VhbmlhICBPY2VhbmlhICBPY2VhbmlhICBPY2VhbmlhICBPY2VhbmlhICBPY2VhbmlhICBPY2VhbmlhICBPY2VhbmlhICBPY2VhbmlhIFxuIFsxNjZdIE9jZWFuaWEgIE9jZWFuaWEgIE9jZWFuaWEgIE9jZWFuaWEgIE9jZWFuaWEgIE9jZWFuaWEgIE9jZWFuaWEgIE9jZWFuaWEgIE9jZWFuaWEgIE9jZWFuaWEgIE9jZWFuaWEgXG4gWzE3N10gT2NlYW5pYSAgT2NlYW5pYSAgT2NlYW5pYSAgT2NlYW5pYSAgT2NlYW5pYSAgT2NlYW5pYSAgT2NlYW5pYSAgT2NlYW5pYSAgT2NlYW5pYSAgT2NlYW5pYSAgT2NlYW5pYSBcbiBbMTg4XSBPY2VhbmlhICBPY2VhbmlhICBPY2VhbmlhICBPY2VhbmlhICBPY2VhbmlhICBPY2VhbmlhICBPY2VhbmlhICBPY2VhbmlhICBPY2VhbmlhICBPY2VhbmlhICBPY2VhbmlhIFxuIFsxOTldIE9jZWFuaWEgIE9jZWFuaWEgIE9jZWFuaWEgIE9jZWFuaWEgIE9jZWFuaWEgIE9jZWFuaWEgIE9jZWFuaWEgIE9jZWFuaWEgIE9jZWFuaWEgIE9jZWFuaWEgIE9jZWFuaWEgXG4gWzIxMF0gT2NlYW5pYSAgT2NlYW5pYSAgT2NlYW5pYSAgT2NlYW5pYSAgT2NlYW5pYSAgT2NlYW5pYSAgT2NlYW5pYSAgT2NlYW5pYSAgT2NlYW5pYSAgT2NlYW5pYSAgT2NlYW5pYSBcbiBbMjIxXSBPY2VhbmlhICBPY2VhbmlhICBPY2VhbmlhICBPY2VhbmlhICBPY2VhbmlhICBPY2VhbmlhICBPY2VhbmlhICBPY2VhbmlhICBPY2VhbmlhICBPY2VhbmlhICBPY2VhbmlhIFxuIFsyMzJdIE9jZWFuaWEgIE9jZWFuaWEgIE9jZWFuaWEgIE9jZWFuaWEgIE9jZWFuaWEgIE9jZWFuaWEgIE9jZWFuaWEgIE9jZWFuaWEgIE9jZWFuaWEgIE9jZWFuaWEgIE9jZWFuaWEgXG4gWzI0M10gT2NlYW5pYSAgT2NlYW5pYSAgT2NlYW5pYSAgT2NlYW5pYSAgT2NlYW5pYSAgT2NlYW5pYSAgT2NlYW5pYSAgT2NlYW5pYSAgT2NlYW5pYSAgT2NlYW5pYSAgT2NlYW5pYSBcbiBbMjU0XSBPY2VhbmlhICBPY2VhbmlhICBPY2VhbmlhICBPY2VhbmlhICBPY2VhbmlhICBPY2VhbmlhICBPY2VhbmlhICBPY2VhbmlhICBPY2VhbmlhICBPY2VhbmlhICBPY2VhbmlhIFxuIFsyNjVdIE9jZWFuaWEgIE9jZWFuaWEgIE9jZWFuaWEgIE9jZWFuaWEgIE9jZWFuaWEgIE9jZWFuaWEgIE9jZWFuaWEgIE9jZWFuaWEgIE9jZWFuaWEgIE9jZWFuaWEgIE9jZWFuaWEgXG4gWzI3Nl0gT2NlYW5pYSAgT2NlYW5pYSAgT2NlYW5pYSAgT2NlYW5pYSAgT2NlYW5pYSAgT2NlYW5pYSAgT2NlYW5pYSAgT2NlYW5pYSAgT2NlYW5pYSAgT2NlYW5pYSAgT2NlYW5pYSBcbiBbMjg3XSBPY2VhbmlhICBPY2VhbmlhICBPY2VhbmlhICBPY2VhbmlhICBFdXJvcGUgICBFdXJvcGUgICBFdXJvcGUgICBFdXJvcGUgICBFdXJvcGUgICBFdXJvcGUgICBFdXJvcGUgIFxuIFsyOThdIEV1cm9wZSAgIEV1cm9wZSAgIEV1cm9wZSAgIEV1cm9wZSAgIEV1cm9wZSAgIEV1cm9wZSAgIEV1cm9wZSAgIEV1cm9wZSAgIEV1cm9wZSAgIEV1cm9wZSAgIEV1cm9wZSAgXG4gWzMwOV0gRXVyb3BlICAgRXVyb3BlICAgRXVyb3BlICAgRXVyb3BlICAgRXVyb3BlICAgRXVyb3BlICAgRXVyb3BlICAgRXVyb3BlICAgRXVyb3BlICAgRXVyb3BlICAgRXVyb3BlICBcbiBbMzIwXSBFdXJvcGUgICBFdXJvcGUgICBFdXJvcGUgICBFdXJvcGUgICBFdXJvcGUgICBFdXJvcGUgICBFdXJvcGUgICBFdXJvcGUgICBFdXJvcGUgICBFdXJvcGUgICBFdXJvcGUgIFxuIFszMzFdIEV1cm9wZSAgIEV1cm9wZSAgIEV1cm9wZSAgIEV1cm9wZSAgIEV1cm9wZSAgIEV1cm9wZSAgIEV1cm9wZSAgIEV1cm9wZSAgIEV1cm9wZSAgIEV1cm9wZSAgIEV1cm9wZSAgXG4gWzM0Ml0gRXVyb3BlICAgRXVyb3BlICAgRXVyb3BlICAgRXVyb3BlICAgRXVyb3BlICAgRXVyb3BlICAgRXVyb3BlICAgRXVyb3BlICAgRXVyb3BlICAgRXVyb3BlICAgRXVyb3BlICBcbiBbMzUzXSBFdXJvcGUgICBFdXJvcGUgICBFdXJvcGUgICBFdXJvcGUgICBFdXJvcGUgICBFdXJvcGUgICBFdXJvcGUgICBFdXJvcGUgICBFdXJvcGUgICBFdXJvcGUgICBFdXJvcGUgIFxuIFszNjRdIEV1cm9wZSAgIEV1cm9wZSAgIEV1cm9wZSAgIEV1cm9wZSAgIEV1cm9wZSAgIEV1cm9wZSAgIEV1cm9wZSAgIEV1cm9wZSAgIEV1cm9wZSAgIEV1cm9wZSAgIEV1cm9wZSAgXG4gWzM3NV0gRXVyb3BlICAgRXVyb3BlICAgRXVyb3BlICAgRXVyb3BlICAgRXVyb3BlICAgRXVyb3BlICAgRXVyb3BlICAgRXVyb3BlICAgRXVyb3BlICAgRXVyb3BlICAgRXVyb3BlICBcbiBbMzg2XSBFdXJvcGUgICBFdXJvcGUgICBFdXJvcGUgICBFdXJvcGUgICBFdXJvcGUgICBFdXJvcGUgICBFdXJvcGUgICBFdXJvcGUgICBFdXJvcGUgICBFdXJvcGUgICBBbWVyaWNhc1xuIFszOTddIEFtZXJpY2FzIEFtZXJpY2FzIEFtZXJpY2FzIEFtZXJpY2FzIEFtZXJpY2FzIEFtZXJpY2FzIEFtZXJpY2FzIEFtZXJpY2FzIEFtZXJpY2FzIEFtZXJpY2FzIEFtZXJpY2FzXG4gWzQwOF0gQW1lcmljYXMgQW1lcmljYXMgQW1lcmljYXMgQW1lcmljYXMgQW1lcmljYXMgQW1lcmljYXMgQW1lcmljYXMgQW1lcmljYXMgQW1lcmljYXMgQW1lcmljYXMgQW1lcmljYXNcbiBbNDE5XSBBbWVyaWNhcyBBbWVyaWNhcyBBbWVyaWNhcyBBbWVyaWNhcyBBbWVyaWNhcyBBbWVyaWNhcyBBbWVyaWNhcyBBbWVyaWNhcyBBc2lhICAgICBBc2lhICAgICBBc2lhICAgIFxuIFs0MzBdIEFzaWEgICAgIEFzaWEgICAgIEFzaWEgICAgIEFzaWEgICAgIEFzaWEgICAgIEFzaWEgICAgIEFzaWEgICAgIEFzaWEgICAgIEFzaWEgICAgIEFzaWEgICAgIEFzaWEgICAgXG4gWzQ0MV0gQXNpYSAgICAgQXNpYSAgICAgQXNpYSAgICAgQXNpYSAgICAgQXNpYSAgICAgQXNpYSAgICAgQXNpYSAgICAgQXNpYSAgICAgQXNpYSAgICAgQXNpYSAgICAgQXNpYSAgICBcbiBbNDUyXSBBc2lhICAgICBBc2lhICAgICBBc2lhICAgICBBc2lhICAgICBBc2lhICAgICBBc2lhICAgICBBc2lhICAgICBBc2lhICAgICBBc2lhICAgICBBc2lhICAgICBBc2lhICAgIFxuIFs0NjNdIEFzaWEgICAgIEFzaWEgICAgIEFzaWEgICAgIEFzaWEgICAgIEFtZXJpY2FzIEFtZXJpY2FzIEFtZXJpY2FzIEFtZXJpY2FzIEFtZXJpY2FzIEFtZXJpY2FzIEFtZXJpY2FzXG4gWzQ3NF0gQW1lcmljYXMgQW1lcmljYXMgQW1lcmljYXMgQW1lcmljYXMgQW1lcmljYXMgQW1lcmljYXMgQW1lcmljYXMgQW1lcmljYXMgQW1lcmljYXMgQW1lcmljYXMgQW1lcmljYXNcbiBbNDg1XSBBbWVyaWNhcyBBbWVyaWNhcyBBbWVyaWNhcyBBbWVyaWNhcyBBbWVyaWNhcyBBbWVyaWNhcyBBbWVyaWNhcyBBbWVyaWNhcyBBbWVyaWNhcyBBbWVyaWNhcyBBbWVyaWNhc1xuIFs0OTZdIEFtZXJpY2FzIEFtZXJpY2FzIEFtZXJpY2FzIEV1cm9wZSAgIEV1cm9wZSAgIEV1cm9wZSAgIEV1cm9wZSAgIEV1cm9wZSAgIEV1cm9wZSAgIEV1cm9wZSAgIEV1cm9wZSAgXG4gWzUwN10gRXVyb3BlICAgRXVyb3BlICAgRXVyb3BlICAgRXVyb3BlICAgRXVyb3BlICAgRXVyb3BlICAgRXVyb3BlICAgRXVyb3BlICAgRXVyb3BlICAgRXVyb3BlICAgRXVyb3BlICBcbiBbNTE4XSBFdXJvcGUgICBFdXJvcGUgICBFdXJvcGUgICBFdXJvcGUgICBFdXJvcGUgICBFdXJvcGUgICBFdXJvcGUgICBFdXJvcGUgICBFdXJvcGUgICBFdXJvcGUgICBFdXJvcGUgIFxuIFs1MjldIEV1cm9wZSAgIEV1cm9wZSAgIEV1cm9wZSAgIEV1cm9wZSAgIEV1cm9wZSAgIEV1cm9wZSAgIEV1cm9wZSAgIEV1cm9wZSAgIEV1cm9wZSAgIEV1cm9wZSAgIEV1cm9wZSAgXG4gWzU0MF0gRXVyb3BlICAgRXVyb3BlICAgRXVyb3BlICAgRXVyb3BlICAgRXVyb3BlICAgRXVyb3BlICAgRXVyb3BlICAgRXVyb3BlICAgRXVyb3BlICAgRXVyb3BlICAgRXVyb3BlICBcbiBbNTUxXSBFdXJvcGUgICBFdXJvcGUgICBFdXJvcGUgICBFdXJvcGUgICBFdXJvcGUgICBFdXJvcGUgICBFdXJvcGUgICBFdXJvcGUgICBFdXJvcGUgICBFdXJvcGUgICBFdXJvcGUgIFxuIFs1NjJdIEV1cm9wZSAgIEV1cm9wZSAgIEV1cm9wZSAgIEV1cm9wZSAgIEV1cm9wZSAgIEV1cm9wZSAgIEV1cm9wZSAgIEV1cm9wZSAgIEV1cm9wZSAgIEV1cm9wZSAgIEV1cm9wZSAgXG4gWzU3M10gRXVyb3BlICAgRXVyb3BlICAgRXVyb3BlICAgRXVyb3BlICAgRXVyb3BlICAgRXVyb3BlICAgRXVyb3BlICAgRXVyb3BlICAgRXVyb3BlICAgRXVyb3BlICAgRXVyb3BlICBcbiBbNTg0XSBFdXJvcGUgICBFdXJvcGUgICBFdXJvcGUgICBFdXJvcGUgICBFdXJvcGUgICBFdXJvcGUgICBFdXJvcGUgICBFdXJvcGUgICBFdXJvcGUgICBFdXJvcGUgICBFdXJvcGUgIFxuIFs1OTVdIEV1cm9wZSAgIEV1cm9wZSAgIEV1cm9wZSAgIEV1cm9wZSAgIEV1cm9wZSAgIEV1cm9wZSAgIEV1cm9wZSAgIEV1cm9wZSAgIEV1cm9wZSAgIEV1cm9wZSAgIEV1cm9wZSAgXG4gWzYwNl0gRXVyb3BlICAgRXVyb3BlICAgRXVyb3BlICAgRXVyb3BlICAgRXVyb3BlICAgRXVyb3BlICAgRXVyb3BlICAgRXVyb3BlICAgRXVyb3BlICAgRXVyb3BlICAgRXVyb3BlICBcbiBbNjE3XSBFdXJvcGUgICBFdXJvcGUgICBFdXJvcGUgICBFdXJvcGUgICBFdXJvcGUgICBFdXJvcGUgICBFdXJvcGUgICBFdXJvcGUgICBFdXJvcGUgICBFdXJvcGUgICBFdXJvcGUgIFxuIFs2MjhdIEV1cm9wZSAgIEV1cm9wZSAgIEV1cm9wZSAgIEV1cm9wZSAgIEV1cm9wZSAgIEV1cm9wZSAgIEV1cm9wZSAgIEV1cm9wZSAgIEV1cm9wZSAgIEV1cm9wZSAgIEV1cm9wZSAgXG4gWzYzOV0gRXVyb3BlICAgRXVyb3BlICAgRXVyb3BlICAgRXVyb3BlICAgRXVyb3BlICAgRXVyb3BlICAgRXVyb3BlICAgRXVyb3BlICAgRXVyb3BlICAgRXVyb3BlICAgRXVyb3BlICBcbiBbNjUwXSBFdXJvcGUgICBFdXJvcGUgICBFdXJvcGUgICBFdXJvcGUgICBFdXJvcGUgICBFdXJvcGUgICBFdXJvcGUgICBFdXJvcGUgICBFdXJvcGUgICBFdXJvcGUgICBFdXJvcGUgIFxuIFs2NjFdIEV1cm9wZSAgIEV1cm9wZSAgIEV1cm9wZSAgIEV1cm9wZSAgIEV1cm9wZSAgIEV1cm9wZSAgIEV1cm9wZSAgIEV1cm9wZSAgIEV1cm9wZSAgIEV1cm9wZSAgIEV1cm9wZSAgXG4gWzY3Ml0gRXVyb3BlICAgRXVyb3BlICAgRXVyb3BlICAgRXVyb3BlICAgRXVyb3BlICAgRXVyb3BlICAgRXVyb3BlICAgRXVyb3BlICAgQW1lcmljYXMgQW1lcmljYXMgQW1lcmljYXNcbiBbNjgzXSBBbWVyaWNhcyBBbWVyaWNhcyBBbWVyaWNhcyBBbWVyaWNhcyBBbWVyaWNhcyBBbWVyaWNhcyBBbWVyaWNhcyBBbWVyaWNhcyBBbWVyaWNhcyBBbWVyaWNhcyBBbWVyaWNhc1xuIFs2OTRdIEFtZXJpY2FzIEFtZXJpY2FzIEFtZXJpY2FzIEFtZXJpY2FzIEFtZXJpY2FzIEFtZXJpY2FzIEFtZXJpY2FzIEFtZXJpY2FzIEFtZXJpY2FzIEFtZXJpY2FzIEFtZXJpY2FzXG4gWzcwNV0gQW1lcmljYXMgQW1lcmljYXMgQW1lcmljYXMgQW1lcmljYXMgQW1lcmljYXMgQW1lcmljYXMgQW1lcmljYXMgQW1lcmljYXMgQW1lcmljYXMgQW1lcmljYXMgQW1lcmljYXNcbiBbNzE2XSBBbWVyaWNhcyBBbWVyaWNhcyBBbWVyaWNhcyBBbWVyaWNhcyBBbWVyaWNhcyBBbWVyaWNhcyBBbWVyaWNhcyBBbWVyaWNhcyBBbWVyaWNhcyBBbWVyaWNhcyBBbWVyaWNhc1xuIFs3MjddIEFtZXJpY2FzIEFtZXJpY2FzIEFtZXJpY2FzIEFtZXJpY2FzIEFtZXJpY2FzIEFtZXJpY2FzIEFtZXJpY2FzIEFtZXJpY2FzIEFtZXJpY2FzIEFtZXJpY2FzIEFtZXJpY2FzXG4gWzczOF0gQW1lcmljYXMgQW1lcmljYXMgQW1lcmljYXMgQW1lcmljYXMgQW1lcmljYXMgQW1lcmljYXMgQW1lcmljYXMgQW1lcmljYXMgQW1lcmljYXMgQW1lcmljYXMgQW1lcmljYXNcbiBbNzQ5XSBBbWVyaWNhcyBBbWVyaWNhcyBBbWVyaWNhcyBBbWVyaWNhcyBBbWVyaWNhcyBBbWVyaWNhcyBBbWVyaWNhcyBBbWVyaWNhcyBBbWVyaWNhcyBBbWVyaWNhcyBBbWVyaWNhc1xuIFs3NjBdIEFtZXJpY2FzIEFtZXJpY2FzIEFtZXJpY2FzIEFtZXJpY2FzIEFtZXJpY2FzIEFtZXJpY2FzIEFtZXJpY2FzIEFtZXJpY2FzIEFtZXJpY2FzIEFtZXJpY2FzIEFtZXJpY2FzXG4gWzc3MV0gQW1lcmljYXMgQW1lcmljYXMgQW1lcmljYXMgQW1lcmljYXMgQW1lcmljYXMgQW1lcmljYXMgQW1lcmljYXMgQW1lcmljYXMgQW1lcmljYXMgQW1lcmljYXMgQW1lcmljYXNcbiBbNzgyXSBBbWVyaWNhcyBBbWVyaWNhcyBBbWVyaWNhcyBBbWVyaWNhcyBBbWVyaWNhcyBBbWVyaWNhcyBBbWVyaWNhcyBBbWVyaWNhcyBBbWVyaWNhcyBBbWVyaWNhcyBBbWVyaWNhc1xuIFs3OTNdIEFtZXJpY2FzIEFtZXJpY2FzIEFtZXJpY2FzIEFtZXJpY2FzIEFtZXJpY2FzIEFtZXJpY2FzIEFtZXJpY2FzIEFtZXJpY2FzIEFtZXJpY2FzIEFtZXJpY2FzIEFtZXJpY2FzXG4gWzgwNF0gQW1lcmljYXMgQW1lcmljYXMgQW1lcmljYXMgQW1lcmljYXMgQW1lcmljYXMgQW1lcmljYXMgQW1lcmljYXMgQW1lcmljYXMgQW1lcmljYXMgQW1lcmljYXMgQW1lcmljYXNcbiBbODE1XSBBbWVyaWNhcyBBbWVyaWNhcyBBbWVyaWNhcyBBbWVyaWNhcyBBbWVyaWNhcyBBbWVyaWNhcyBBbWVyaWNhcyBBbWVyaWNhcyBBbWVyaWNhcyBBbWVyaWNhcyBBbWVyaWNhc1xuIFs4MjZdIEFtZXJpY2FzIEFtZXJpY2FzIEFtZXJpY2FzIEFtZXJpY2FzIEFtZXJpY2FzIEFtZXJpY2FzIEFzaWEgICAgIEFzaWEgICAgIEFzaWEgICAgIEFzaWEgICAgIEFzaWEgICAgXG4gWzgzN10gRXVyb3BlICAgRXVyb3BlICAgRXVyb3BlICAgRXVyb3BlICAgRXVyb3BlICAgRXVyb3BlICAgRXVyb3BlICAgRXVyb3BlICAgRXVyb3BlICAgRXVyb3BlICAgRXVyb3BlICBcbiBbODQ4XSBFdXJvcGUgICBFdXJvcGUgICBFdXJvcGUgICBFdXJvcGUgICBFdXJvcGUgICBFdXJvcGUgICBFdXJvcGUgICBFdXJvcGUgICBFdXJvcGUgICBFdXJvcGUgICBFdXJvcGUgIFxuIFs4NTldIEV1cm9wZSAgIEV1cm9wZSAgIEV1cm9wZSAgIEV1cm9wZSAgIEV1cm9wZSAgIEV1cm9wZSAgIEV1cm9wZSAgIEV1cm9wZSAgIEV1cm9wZSAgIEV1cm9wZSAgIEV1cm9wZSAgXG4gWzg3MF0gRXVyb3BlICAgRXVyb3BlICAgRXVyb3BlICAgRXVyb3BlICAgRXVyb3BlICAgRXVyb3BlICAgRXVyb3BlICAgRXVyb3BlICAgRXVyb3BlICAgRXVyb3BlICAgRXVyb3BlICBcbiBbODgxXSBFdXJvcGUgICBFdXJvcGUgICBFdXJvcGUgICBFdXJvcGUgICBFdXJvcGUgICBFdXJvcGUgICBFdXJvcGUgICBFdXJvcGUgICBFdXJvcGUgICBFdXJvcGUgICBBZnJpY2EgIFxuIFs4OTJdIEFmcmljYSAgIEFmcmljYSAgIEFmcmljYSAgIEFmcmljYSAgIEFmcmljYSAgIEFmcmljYSAgIEFmcmljYSAgIEFmcmljYSAgIEFmcmljYSAgIEFmcmljYSAgIEFmcmljYSAgXG4gWzkwM10gQWZyaWNhICAgQWZyaWNhICAgQWZyaWNhICAgQWZyaWNhICAgQWZyaWNhICAgQWZyaWNhICAgQWZyaWNhICAgQWZyaWNhICAgQWZyaWNhICAgQWZyaWNhICAgQWZyaWNhICBcbiBbOTE0XSBBZnJpY2EgICBBZnJpY2EgICBBZnJpY2EgICBBZnJpY2EgICBBZnJpY2EgICBBZnJpY2EgICBBZnJpY2EgICBBZnJpY2EgICBBZnJpY2EgICBBZnJpY2EgICBBZnJpY2EgIFxuIFs5MjVdIEFmcmljYSAgIEFmcmljYSAgIEFmcmljYSAgIEFmcmljYSAgIEFmcmljYSAgIEFtZXJpY2FzIEFtZXJpY2FzIEFtZXJpY2FzIEFtZXJpY2FzIEFtZXJpY2FzIEFtZXJpY2FzXG4gWzkzNl0gQW1lcmljYXMgQW1lcmljYXMgQW1lcmljYXMgQW1lcmljYXMgQW1lcmljYXMgQW1lcmljYXMgQW1lcmljYXMgQW1lcmljYXMgQW1lcmljYXMgQW1lcmljYXMgQW1lcmljYXNcbiBbOTQ3XSBBbWVyaWNhcyBBbWVyaWNhcyBBbWVyaWNhcyBBbWVyaWNhcyBBbWVyaWNhcyBBbWVyaWNhcyBBbWVyaWNhcyBBbWVyaWNhcyBBbWVyaWNhcyBBbWVyaWNhcyBBbWVyaWNhc1xuIFs5NThdIEFtZXJpY2FzIEFtZXJpY2FzIEFtZXJpY2FzIEFtZXJpY2FzIEFtZXJpY2FzIEFtZXJpY2FzIEFtZXJpY2FzIEFtZXJpY2FzIEFtZXJpY2FzIEFtZXJpY2FzIEFtZXJpY2FzXG4gWzk2OV0gQW1lcmljYXMgQW1lcmljYXMgQW1lcmljYXMgQW1lcmljYXMgQW1lcmljYXMgQW1lcmljYXMgQW1lcmljYXMgQW1lcmljYXMgQW1lcmljYXMgQW1lcmljYXMgQW1lcmljYXNcbiBbOTgwXSBBbWVyaWNhcyBBbWVyaWNhcyBBbWVyaWNhcyBBbWVyaWNhcyBBbWVyaWNhcyBBbWVyaWNhcyBBbWVyaWNhcyBBbWVyaWNhcyBBbWVyaWNhcyBBbWVyaWNhcyBBbWVyaWNhc1xuIFs5OTFdIEFtZXJpY2FzIEFtZXJpY2FzIEFtZXJpY2FzIEFtZXJpY2FzIEFtZXJpY2FzIEFtZXJpY2FzIEFtZXJpY2FzIEFtZXJpY2FzIEFtZXJpY2FzIEFtZXJpY2FzXG4gWyByZWFjaGVkIGdldE9wdGlvbihcIm1heC5wcmludFwiKSAtLSBvbWl0dGVkIDUyNDIgZW50cmllcyBdXG5MZXZlbHM6IEFmcmljYSBBbWVyaWNhcyBBc2lhIEV1cm9wZSBPY2VhbmlhXG4ifQ== -->
+<pre><code>   [1] Africa   Africa   Africa   Africa   Africa   Africa   Africa   Africa   Africa   Africa   Africa  
+  [12] Africa   Africa   Africa   Africa   Africa   Africa   Africa   Africa   Africa   Africa   Africa  
+  [23] Africa   Americas Americas Americas Americas Americas Americas Americas Americas Americas Americas
+  [34] Americas Americas Americas Americas Americas Americas Americas Americas Americas Americas Americas
+  [45] Americas Americas Americas Americas Americas Americas Americas Americas Americas Americas Americas
+  [56] Americas Americas Americas Americas Americas Americas Americas Americas Americas Americas Americas
+  [67] Americas Americas Americas Americas Americas Americas Americas Americas Americas Americas Americas
+  [78] Americas Americas Americas Americas Americas Americas Americas Americas Americas Americas Americas
+  [89] Americas Americas Americas Americas Americas Americas Americas Americas Americas Americas Americas
+ [100] Americas Americas Americas Americas Americas Americas Americas Americas Americas Americas Americas
+ [111] Americas Americas Americas Americas Americas Americas Americas Americas Americas Americas Americas
+ [122] Americas Americas Americas Americas Americas Americas Americas Americas Americas Americas Americas
+ [133] Americas Americas Americas Oceania  Oceania  Oceania  Oceania  Oceania  Oceania  Oceania  Oceania 
+ [144] Oceania  Oceania  Oceania  Oceania  Oceania  Oceania  Oceania  Oceania  Oceania  Oceania  Oceania 
+ [155] Oceania  Oceania  Oceania  Oceania  Oceania  Oceania  Oceania  Oceania  Oceania  Oceania  Oceania 
+ [166] Oceania  Oceania  Oceania  Oceania  Oceania  Oceania  Oceania  Oceania  Oceania  Oceania  Oceania 
+ [177] Oceania  Oceania  Oceania  Oceania  Oceania  Oceania  Oceania  Oceania  Oceania  Oceania  Oceania 
+ [188] Oceania  Oceania  Oceania  Oceania  Oceania  Oceania  Oceania  Oceania  Oceania  Oceania  Oceania 
+ [199] Oceania  Oceania  Oceania  Oceania  Oceania  Oceania  Oceania  Oceania  Oceania  Oceania  Oceania 
+ [210] Oceania  Oceania  Oceania  Oceania  Oceania  Oceania  Oceania  Oceania  Oceania  Oceania  Oceania 
+ [221] Oceania  Oceania  Oceania  Oceania  Oceania  Oceania  Oceania  Oceania  Oceania  Oceania  Oceania 
+ [232] Oceania  Oceania  Oceania  Oceania  Oceania  Oceania  Oceania  Oceania  Oceania  Oceania  Oceania 
+ [243] Oceania  Oceania  Oceania  Oceania  Oceania  Oceania  Oceania  Oceania  Oceania  Oceania  Oceania 
+ [254] Oceania  Oceania  Oceania  Oceania  Oceania  Oceania  Oceania  Oceania  Oceania  Oceania  Oceania 
+ [265] Oceania  Oceania  Oceania  Oceania  Oceania  Oceania  Oceania  Oceania  Oceania  Oceania  Oceania 
+ [276] Oceania  Oceania  Oceania  Oceania  Oceania  Oceania  Oceania  Oceania  Oceania  Oceania  Oceania 
+ [287] Oceania  Oceania  Oceania  Oceania  Europe   Europe   Europe   Europe   Europe   Europe   Europe  
+ [298] Europe   Europe   Europe   Europe   Europe   Europe   Europe   Europe   Europe   Europe   Europe  
+ [309] Europe   Europe   Europe   Europe   Europe   Europe   Europe   Europe   Europe   Europe   Europe  
+ [320] Europe   Europe   Europe   Europe   Europe   Europe   Europe   Europe   Europe   Europe   Europe  
+ [331] Europe   Europe   Europe   Europe   Europe   Europe   Europe   Europe   Europe   Europe   Europe  
+ [342] Europe   Europe   Europe   Europe   Europe   Europe   Europe   Europe   Europe   Europe   Europe  
+ [353] Europe   Europe   Europe   Europe   Europe   Europe   Europe   Europe   Europe   Europe   Europe  
+ [364] Europe   Europe   Europe   Europe   Europe   Europe   Europe   Europe   Europe   Europe   Europe  
+ [375] Europe   Europe   Europe   Europe   Europe   Europe   Europe   Europe   Europe   Europe   Europe  
+ [386] Europe   Europe   Europe   Europe   Europe   Europe   Europe   Europe   Europe   Europe   Americas
+ [397] Americas Americas Americas Americas Americas Americas Americas Americas Americas Americas Americas
+ [408] Americas Americas Americas Americas Americas Americas Americas Americas Americas Americas Americas
+ [419] Americas Americas Americas Americas Americas Americas Americas Americas Asia     Asia     Asia    
+ [430] Asia     Asia     Asia     Asia     Asia     Asia     Asia     Asia     Asia     Asia     Asia    
+ [441] Asia     Asia     Asia     Asia     Asia     Asia     Asia     Asia     Asia     Asia     Asia    
+ [452] Asia     Asia     Asia     Asia     Asia     Asia     Asia     Asia     Asia     Asia     Asia    
+ [463] Asia     Asia     Asia     Asia     Americas Americas Americas Americas Americas Americas Americas
+ [474] Americas Americas Americas Americas Americas Americas Americas Americas Americas Americas Americas
+ [485] Americas Americas Americas Americas Americas Americas Americas Americas Americas Americas Americas
+ [496] Americas Americas Americas Europe   Europe   Europe   Europe   Europe   Europe   Europe   Europe  
+ [507] Europe   Europe   Europe   Europe   Europe   Europe   Europe   Europe   Europe   Europe   Europe  
+ [518] Europe   Europe   Europe   Europe   Europe   Europe   Europe   Europe   Europe   Europe   Europe  
+ [529] Europe   Europe   Europe   Europe   Europe   Europe   Europe   Europe   Europe   Europe   Europe  
+ [540] Europe   Europe   Europe   Europe   Europe   Europe   Europe   Europe   Europe   Europe   Europe  
+ [551] Europe   Europe   Europe   Europe   Europe   Europe   Europe   Europe   Europe   Europe   Europe  
+ [562] Europe   Europe   Europe   Europe   Europe   Europe   Europe   Europe   Europe   Europe   Europe  
+ [573] Europe   Europe   Europe   Europe   Europe   Europe   Europe   Europe   Europe   Europe   Europe  
+ [584] Europe   Europe   Europe   Europe   Europe   Europe   Europe   Europe   Europe   Europe   Europe  
+ [595] Europe   Europe   Europe   Europe   Europe   Europe   Europe   Europe   Europe   Europe   Europe  
+ [606] Europe   Europe   Europe   Europe   Europe   Europe   Europe   Europe   Europe   Europe   Europe  
+ [617] Europe   Europe   Europe   Europe   Europe   Europe   Europe   Europe   Europe   Europe   Europe  
+ [628] Europe   Europe   Europe   Europe   Europe   Europe   Europe   Europe   Europe   Europe   Europe  
+ [639] Europe   Europe   Europe   Europe   Europe   Europe   Europe   Europe   Europe   Europe   Europe  
+ [650] Europe   Europe   Europe   Europe   Europe   Europe   Europe   Europe   Europe   Europe   Europe  
+ [661] Europe   Europe   Europe   Europe   Europe   Europe   Europe   Europe   Europe   Europe   Europe  
+ [672] Europe   Europe   Europe   Europe   Europe   Europe   Europe   Europe   Americas Americas Americas
+ [683] Americas Americas Americas Americas Americas Americas Americas Americas Americas Americas Americas
+ [694] Americas Americas Americas Americas Americas Americas Americas Americas Americas Americas Americas
+ [705] Americas Americas Americas Americas Americas Americas Americas Americas Americas Americas Americas
+ [716] Americas Americas Americas Americas Americas Americas Americas Americas Americas Americas Americas
+ [727] Americas Americas Americas Americas Americas Americas Americas Americas Americas Americas Americas
+ [738] Americas Americas Americas Americas Americas Americas Americas Americas Americas Americas Americas
+ [749] Americas Americas Americas Americas Americas Americas Americas Americas Americas Americas Americas
+ [760] Americas Americas Americas Americas Americas Americas Americas Americas Americas Americas Americas
+ [771] Americas Americas Americas Americas Americas Americas Americas Americas Americas Americas Americas
+ [782] Americas Americas Americas Americas Americas Americas Americas Americas Americas Americas Americas
+ [793] Americas Americas Americas Americas Americas Americas Americas Americas Americas Americas Americas
+ [804] Americas Americas Americas Americas Americas Americas Americas Americas Americas Americas Americas
+ [815] Americas Americas Americas Americas Americas Americas Americas Americas Americas Americas Americas
+ [826] Americas Americas Americas Americas Americas Americas Asia     Asia     Asia     Asia     Asia    
+ [837] Europe   Europe   Europe   Europe   Europe   Europe   Europe   Europe   Europe   Europe   Europe  
+ [848] Europe   Europe   Europe   Europe   Europe   Europe   Europe   Europe   Europe   Europe   Europe  
+ [859] Europe   Europe   Europe   Europe   Europe   Europe   Europe   Europe   Europe   Europe   Europe  
+ [870] Europe   Europe   Europe   Europe   Europe   Europe   Europe   Europe   Europe   Europe   Europe  
+ [881] Europe   Europe   Europe   Europe   Europe   Europe   Europe   Europe   Europe   Europe   Africa  
+ [892] Africa   Africa   Africa   Africa   Africa   Africa   Africa   Africa   Africa   Africa   Africa  
+ [903] Africa   Africa   Africa   Africa   Africa   Africa   Africa   Africa   Africa   Africa   Africa  
+ [914] Africa   Africa   Africa   Africa   Africa   Africa   Africa   Africa   Africa   Africa   Africa  
+ [925] Africa   Africa   Africa   Africa   Africa   Americas Americas Americas Americas Americas Americas
+ [936] Americas Americas Americas Americas Americas Americas Americas Americas Americas Americas Americas
+ [947] Americas Americas Americas Americas Americas Americas Americas Americas Americas Americas Americas
+ [958] Americas Americas Americas Americas Americas Americas Americas Americas Americas Americas Americas
+ [969] Americas Americas Americas Americas Americas Americas Americas Americas Americas Americas Americas
+ [980] Americas Americas Americas Americas Americas Americas Americas Americas Americas Americas Americas
+ [991] Americas Americas Americas Americas Americas Americas Americas Americas Americas Americas
+ [ reached getOption(&quot;max.print&quot;) -- omitted 5242 entries ]
+Levels: Africa Americas Asia Europe Oceania</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYXMubnVtZXJpYyhkZjg2JHJlZ2lvbilcbmBgYCJ9 -->
+<pre class="r"><code>as.numeric(df86$region)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiICAgWzFdIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAyIDIgMiAyIDIgMiAyIDIgMiAyIDIgMiAyIDIgMiAyIDIgMiAyIDIgMiAyIDIgMiAyIDIgMiAyXG4gIFs1Ml0gMiAyIDIgMiAyIDIgMiAyIDIgMiAyIDIgMiAyIDIgMiAyIDIgMiAyIDIgMiAyIDIgMiAyIDIgMiAyIDIgMiAyIDIgMiAyIDIgMiAyIDIgMiAyIDIgMiAyIDIgMiAyIDIgMiAyIDJcbiBbMTAzXSAyIDIgMiAyIDIgMiAyIDIgMiAyIDIgMiAyIDIgMiAyIDIgMiAyIDIgMiAyIDIgMiAyIDIgMiAyIDIgMiAyIDIgMiA1IDUgNSA1IDUgNSA1IDUgNSA1IDUgNSA1IDUgNSA1IDUgNVxuIFsxNTRdIDUgNSA1IDUgNSA1IDUgNSA1IDUgNSA1IDUgNSA1IDUgNSA1IDUgNSA1IDUgNSA1IDUgNSA1IDUgNSA1IDUgNSA1IDUgNSA1IDUgNSA1IDUgNSA1IDUgNSA1IDUgNSA1IDUgNSA1XG4gWzIwNV0gNSA1IDUgNSA1IDUgNSA1IDUgNSA1IDUgNSA1IDUgNSA1IDUgNSA1IDUgNSA1IDUgNSA1IDUgNSA1IDUgNSA1IDUgNSA1IDUgNSA1IDUgNSA1IDUgNSA1IDUgNSA1IDUgNSA1IDVcbiBbMjU2XSA1IDUgNSA1IDUgNSA1IDUgNSA1IDUgNSA1IDUgNSA1IDUgNSA1IDUgNSA1IDUgNSA1IDUgNSA1IDUgNSA1IDUgNSA1IDUgNCA0IDQgNCA0IDQgNCA0IDQgNCA0IDQgNCA0IDQgNFxuIFszMDddIDQgNCA0IDQgNCA0IDQgNCA0IDQgNCA0IDQgNCA0IDQgNCA0IDQgNCA0IDQgNCA0IDQgNCA0IDQgNCA0IDQgNCA0IDQgNCA0IDQgNCA0IDQgNCA0IDQgNCA0IDQgNCA0IDQgNCA0XG4gWzM1OF0gNCA0IDQgNCA0IDQgNCA0IDQgNCA0IDQgNCA0IDQgNCA0IDQgNCA0IDQgNCA0IDQgNCA0IDQgNCA0IDQgNCA0IDQgNCA0IDQgNCA0IDIgMiAyIDIgMiAyIDIgMiAyIDIgMiAyIDJcbiBbNDA5XSAyIDIgMiAyIDIgMiAyIDIgMiAyIDIgMiAyIDIgMiAyIDIgMiAzIDMgMyAzIDMgMyAzIDMgMyAzIDMgMyAzIDMgMyAzIDMgMyAzIDMgMyAzIDMgMyAzIDMgMyAzIDMgMyAzIDMgM1xuIFs0NjBdIDMgMyAzIDMgMyAzIDMgMiAyIDIgMiAyIDIgMiAyIDIgMiAyIDIgMiAyIDIgMiAyIDIgMiAyIDIgMiAyIDIgMiAyIDIgMiAyIDIgMiAyIDQgNCA0IDQgNCA0IDQgNCA0IDQgNCA0XG4gWzUxMV0gNCA0IDQgNCA0IDQgNCA0IDQgNCA0IDQgNCA0IDQgNCA0IDQgNCA0IDQgNCA0IDQgNCA0IDQgNCA0IDQgNCA0IDQgNCA0IDQgNCA0IDQgNCA0IDQgNCA0IDQgNCA0IDQgNCA0IDRcbiBbNTYyXSA0IDQgNCA0IDQgNCA0IDQgNCA0IDQgNCA0IDQgNCA0IDQgNCA0IDQgNCA0IDQgNCA0IDQgNCA0IDQgNCA0IDQgNCA0IDQgNCA0IDQgNCA0IDQgNCA0IDQgNCA0IDQgNCA0IDQgNFxuIFs2MTNdIDQgNCA0IDQgNCA0IDQgNCA0IDQgNCA0IDQgNCA0IDQgNCA0IDQgNCA0IDQgNCA0IDQgNCA0IDQgNCA0IDQgNCA0IDQgNCA0IDQgNCA0IDQgNCA0IDQgNCA0IDQgNCA0IDQgNCA0XG4gWzY2NF0gNCA0IDQgNCA0IDQgNCA0IDQgNCA0IDQgNCA0IDQgNCAyIDIgMiAyIDIgMiAyIDIgMiAyIDIgMiAyIDIgMiAyIDIgMiAyIDIgMiAyIDIgMiAyIDIgMiAyIDIgMiAyIDIgMiAyIDJcbiBbNzE1XSAyIDIgMiAyIDIgMiAyIDIgMiAyIDIgMiAyIDIgMiAyIDIgMiAyIDIgMiAyIDIgMiAyIDIgMiAyIDIgMiAyIDIgMiAyIDIgMiAyIDIgMiAyIDIgMiAyIDIgMiAyIDIgMiAyIDIgMlxuIFs3NjZdIDIgMiAyIDIgMiAyIDIgMiAyIDIgMiAyIDIgMiAyIDIgMiAyIDIgMiAyIDIgMiAyIDIgMiAyIDIgMiAyIDIgMiAyIDIgMiAyIDIgMiAyIDIgMiAyIDIgMiAyIDIgMiAyIDIgMiAyXG4gWzgxN10gMiAyIDIgMiAyIDIgMiAyIDIgMiAyIDIgMiAyIDIgMyAzIDMgMyAzIDQgNCA0IDQgNCA0IDQgNCA0IDQgNCA0IDQgNCA0IDQgNCA0IDQgNCA0IDQgNCA0IDQgNCA0IDQgNCA0IDRcbiBbODY4XSA0IDQgNCA0IDQgNCA0IDQgNCA0IDQgNCA0IDQgNCA0IDQgNCA0IDQgNCA0IDQgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAxIDEgMVxuIFs5MTldIDEgMSAxIDEgMSAxIDEgMSAxIDEgMSAyIDIgMiAyIDIgMiAyIDIgMiAyIDIgMiAyIDIgMiAyIDIgMiAyIDIgMiAyIDIgMiAyIDIgMiAyIDIgMiAyIDIgMiAyIDIgMiAyIDIgMiAyXG4gWzk3MF0gMiAyIDIgMiAyIDIgMiAyIDIgMiAyIDIgMiAyIDIgMiAyIDIgMiAyIDIgMiAyIDIgMiAyIDIgMiAyIDIgMlxuIFsgcmVhY2hlZCBnZXRPcHRpb24oXCJtYXgucHJpbnRcIikgLS0gb21pdHRlZCA1MjQyIGVudHJpZXMgXVxuIn0= -->
+<pre><code>   [1] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+  [52] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+ [103] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+ [154] 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+ [205] 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+ [256] 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4
+ [307] 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4
+ [358] 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 2 2 2 2 2 2 2 2 2 2 2 2 2
+ [409] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+ [460] 3 3 3 3 3 3 3 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 4 4 4 4 4 4 4 4 4 4 4 4
+ [511] 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4
+ [562] 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4
+ [613] 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4
+ [664] 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+ [715] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+ [766] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+ [817] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 3 3 3 3 3 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4
+ [868] 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+ [919] 1 1 1 1 1 1 1 1 1 1 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+ [970] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+ [ reached getOption(&quot;max.print&quot;) -- omitted 5242 entries ]</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZy44NjwtZGY4Nlt3aGljaChkZjg2JHdlaWdodD4xMDAwMDAwMCksXVxuZzg2PC1ncmFwaF9mcm9tX2RhdGFfZnJhbWUoZy44NilcbmcuOTY8LWRmOTZbd2hpY2goZGY5NiR3ZWlnaHQ+MTAwMDAwMDApLF1cbmc5NjwtZ3JhcGhfZnJvbV9kYXRhX2ZyYW1lKGcuOTYpXG5nLjA2PC1kZjA2W3doaWNoKGRmMDYkd2VpZ2h0PjEwMDAwMDAwKSxdXG5nMDY8LWdyYXBoX2Zyb21fZGF0YV9mcmFtZShnLjA2KVxuZy4xNjwtZGYxNlt3aGljaChkZjE2JHdlaWdodD4xMDAwMDAwMCksXVxuZzE2PC1ncmFwaF9mcm9tX2RhdGFfZnJhbWUoZy4xNilcbmBgYCJ9 -->
 <pre class="r"><code>g.86&lt;-df86[which(df86$weight&gt;10000000),]
 g86&lt;-graph_from_data_frame(g.86)
@@ -1744,26 +1865,56 @@ g16&lt;-graph_from_data_frame(g.16)</code></pre>
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYmV0d2Vlbjg2PC1iZXR3ZWVubmVzcyhnODYpXG4jYmV0d2Vlbjg2XG5iZXR3ZWVuOTY8LWJldHdlZW5uZXNzKGc5NilcbiNiZXR3ZWVuOTZcbmJldHdlZW4wNjwtYmV0d2Vlbm5lc3MoZzA2KVxuI2JldHdlZW4wNlxuYmV0d2VlbjE2PC1iZXR3ZWVubmVzcyhnMTYpXG4jYmV0d2VlbjE2XG54MTwtbWVhbih1bm5hbWUoYmV0d2Vlbjg2KSlcbngyPC1tZWFuKHVubmFtZShiZXR3ZWVuOTYpKVxueDM8LW1lYW4odW5uYW1lKGJldHdlZW4wNikpXG54NDwtbWVhbih1bm5hbWUoYmV0d2VlbjE2KSlcbngxXG5gYGAifQ== -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYmV0d2Vlbjg2PC1iZXR3ZWVubmVzcyhnODYpXG4jYmV0d2Vlbjg2XG5jb2w4NjwtZGF0YS5mcmFtZSh1bm5hbWUoYmV0d2Vlbjg2KSlcbmNvdW50ODY8LWFwcGx5KGNvbDg2LDIsZnVuY3Rpb24oYylzdW0oYz09MCkpXG5jb3VudDg2XG5gYGAifQ== -->
 <pre class="r"><code>between86&lt;-betweenness(g86)
 #between86
-between96&lt;-betweenness(g96)
+col86&lt;-data.frame(unname(between86))
+count86&lt;-apply(col86,2,function(c)sum(c==0))
+count86</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoidW5uYW1lLmJldHdlZW44Ni4gXG4gICAgICAgICAgICAgICA4MSBcbiJ9 -->
+<pre><code>unname.between86. 
+               81 </code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYmV0d2Vlbjk2PC1iZXR3ZWVubmVzcyhnOTYpXG4jYmV0d2Vlbjk2XG5jb2w5NjwtZGF0YS5mcmFtZSh1bm5hbWUoYmV0d2Vlbjk2KSlcbmNvdW50OTY8LWFwcGx5KGNvbDk2LDIsZnVuY3Rpb24oYylzdW0oYz09MCkpXG5jb3VudDk2XG5gYGAifQ== -->
+<pre class="r"><code>between96&lt;-betweenness(g96)
 #between96
-between06&lt;-betweenness(g06)
+col96&lt;-data.frame(unname(between96))
+count96&lt;-apply(col96,2,function(c)sum(c==0))
+count96</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoidW5uYW1lLmJldHdlZW45Ni4gXG4gICAgICAgICAgICAgIDEwNyBcbiJ9 -->
+<pre><code>unname.between96. 
+              107 </code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYmV0d2VlbjA2PC1iZXR3ZWVubmVzcyhnMDYpXG4jYmV0d2VlbjA2XG5jb2wwNjwtZGF0YS5mcmFtZSh1bm5hbWUoYmV0d2VlbjA2KSlcbmNvdW50MDY8LWFwcGx5KGNvbDA2LDIsZnVuY3Rpb24oYylzdW0oYz09MCkpXG5jb3VudDA2XG5gYGAifQ== -->
+<pre class="r"><code>between06&lt;-betweenness(g06)
 #between06
-between16&lt;-betweenness(g16)
+col06&lt;-data.frame(unname(between06))
+count06&lt;-apply(col06,2,function(c)sum(c==0))
+count06</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoidW5uYW1lLmJldHdlZW4wNi4gXG4gICAgICAgICAgICAgICA4NyBcbiJ9 -->
+<pre><code>unname.between06. 
+               87 </code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYmV0d2VlbjE2PC1iZXR3ZWVubmVzcyhnMTYpXG4jYmV0d2VlbjE2XG5jb2wxNjwtZGF0YS5mcmFtZSh1bm5hbWUoYmV0d2VlbjE2KSlcbmNvdW50MTY8LWFwcGx5KGNvbDE2LDIsZnVuY3Rpb24oYylzdW0oYz09MCkpXG5jb3VudDE2XG5gYGAifQ== -->
+<pre class="r"><code>between16&lt;-betweenness(g16)
 #between16
-x1&lt;-mean(unname(between86))
+col16&lt;-data.frame(unname(between16))
+count16&lt;-apply(col16,2,function(c)sum(c==0))
+count16</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoidW5uYW1lLmJldHdlZW4xNi4gXG4gICAgICAgICAgICAgICA2NSBcbiJ9 -->
+<pre><code>unname.between16. 
+               65 </code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxueDE8LW1lYW4odW5uYW1lKGJldHdlZW44NikpXG54MjwtbWVhbih1bm5hbWUoYmV0d2Vlbjk2KSlcbngzPC1tZWFuKHVubmFtZShiZXR3ZWVuMDYpKVxueDQ8LW1lYW4odW5uYW1lKGJldHdlZW4xNikpXG5hdmVyYWdlQmV0d2VlbjwtZGF0YS5mcmFtZShhdmVyYWdlPWMoeDEseDIseDMseDQpLHllYXI9YyhcIjE5ODZcIixcIjE5OTZcIixcIjIwMDZcIixcIjIwMTZcIikpXG5gYGAifQ== -->
+<pre class="r"><code>x1&lt;-mean(unname(between86))
 x2&lt;-mean(unname(between96))
 x3&lt;-mean(unname(between06))
 x4&lt;-mean(unname(between16))
-x1</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDEyMC42OTY2XG4ifQ== -->
-<pre><code>[1] 120.6966</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYXZlcmFnZUJldHdlZW48LWRhdGEuZnJhbWUoYXZlcmFnZT1jKHgxLHgyLHgzLHg0KSx5ZWFyPWMoXCIxOTg2XCIsXCIxOTk2XCIsXCIyMDA2XCIsXCIyMDE2XCIpKVxuYGBgIn0= -->
-<pre class="r"><code>averageBetween&lt;-data.frame(average=c(x1,x2,x3,x4),year=c(&quot;1986&quot;,&quot;1996&quot;,&quot;2006&quot;,&quot;2016&quot;))</code></pre>
+averageBetween&lt;-data.frame(average=c(x1,x2,x3,x4),year=c(&quot;1986&quot;,&quot;1996&quot;,&quot;2006&quot;,&quot;2016&quot;))</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-chunk-begin -->
@@ -1832,164 +1983,242 @@ ggplot(data=averageclose,aes(x=year,y=average)) +
 <p>This shows that over the decades countries have become more connected resulting in more direct trade patterns</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY29tbXVuPC13YWxrdHJhcC5jb21tdW5pdHkoZzg2KVxuZzg2JGNvbW11bml0eTwtbWVtYmVyc2hpcChjb21tdW4pXG5nODYkY29tbXVuaXR5XG5gYGAifQ== -->
-<pre class="r"><code>commun&lt;-walktrap.community(g86)
-g86$community&lt;-membership(commun)
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucmFuazg2PC1wYWdlLnJhbmsoZzg2KVxuI2JldHdlZW44NlxucmFuazk2PC1wYWdlLnJhbmsoZzk2KVxuI2JldHdlZW45NlxucmFuazA2PC1wYWdlLnJhbmsoZzA2KVxuI2JldHdlZW4wNlxucmFuazE2PC1wYWdlLnJhbmsoZzE2KVxuI2JldHdlZW4xNlxuejE8LW1lYW4odW5uYW1lKHJhbms4NiR2ZWN0b3IpKVxuejI8LW1lYW4odW5uYW1lKHJhbms5NiR2ZWN0b3IpKVxuejM8LW1lYW4odW5uYW1lKHJhbmswNiR2ZWN0b3IpKVxuejQ8LW1lYW4odW5uYW1lKHJhbmsxNiR2ZWN0b3IpKVxuejFcbmBgYCJ9 -->
+<pre class="r"><code>rank86&lt;-page.rank(g86)
+#between86
+rank96&lt;-page.rank(g96)
+#between96
+rank06&lt;-page.rank(g06)
+#between06
+rank16&lt;-page.rank(g16)
+#between16
+z1&lt;-mean(unname(rank86$vector))
+z2&lt;-mean(unname(rank96$vector))
+z3&lt;-mean(unname(rank06$vector))
+z4&lt;-mean(unname(rank16$vector))
+z1</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDAuMDA2ODk2NTUyXG4ifQ== -->
+<pre><code>[1] 0.006896552</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYXZlcmFnZVJhbms8LWRhdGEuZnJhbWUoYXZlcmFnZT1jKHoxLHoyLHozLHo0KSx5ZWFyPWMoXCIxOTg2XCIsXCIxOTk2XCIsXCIyMDA2XCIsXCIyMDE2XCIpKVxuYGBgIn0= -->
+<pre class="r"><code>averageRank&lt;-data.frame(average=c(z1,z2,z3,z4),year=c(&quot;1986&quot;,&quot;1996&quot;,&quot;2006&quot;,&quot;2016&quot;))</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZ2dwbG90KGRhdGE9YXZlcmFnZVJhbmssYWVzKHg9eWVhcix5PWF2ZXJhZ2UpKSArXG4gIGdlb21fYmFyKHN0YXQ9XCJpZGVudGl0eVwiKSArIGdndGl0bGUoXCJBdmVyYWdlIHBhZ2UgcmFuayBvdmVyIGZvdXIgZGVjYWRlc1wiKVxuYGBgIn0= -->
+<pre class="r"><code>ggplot(data=averageRank,aes(x=year,y=average)) +
+  geom_bar(stat=&quot;identity&quot;) + ggtitle(&quot;Average page rank over four decades&quot;)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-plot-begin eyJjb25kaXRpb25zIjpbXSwiaGVpZ2h0Ijo0MzIuNjMyOSwic2l6ZV9iZWhhdmlvciI6MCwid2lkdGgiOjcwMH0= -->
+<p><img src="data:image/png;base64,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" /></p>
+<!-- rnb-plot-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxud2M4Njwtd2Fsa3RyYXAuY29tbXVuaXR5KGc4NixzdGVwcyA9IDIwKVxud2M5Njwtd2Fsa3RyYXAuY29tbXVuaXR5KGc5NixzdGVwcz0yMClcbndjMDY8LXdhbGt0cmFwLmNvbW11bml0eShnMDYsc3RlcHM9MjApXG53YzE2PC13YWxrdHJhcC5jb21tdW5pdHkoZzE2LHN0ZXBzID0gMjApXG5zaXplcyh3Yzg2KVxuYGBgIn0= -->
+<pre class="r"><code>wc86&lt;-walktrap.community(g86,steps = 20)
+wc96&lt;-walktrap.community(g96,steps=20)
+wc06&lt;-walktrap.community(g06,steps=20)
+wc16&lt;-walktrap.community(g16,steps = 20)
+sizes(wc86)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiQ29tbXVuaXR5IHNpemVzXG4gMSAgMiAgMyAgNCAgNSAgNiAgNyAgOCAgOSBcbjEwIDUxICA0IDI2IDMwIDIxICAxICAxICAxIFxuIn0= -->
+<pre><code>Community sizes
+ 1  2  3  4  5  6  7  8  9 
+10 51  4 26 30 21  1  1  1 </code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc2l6ZXMod2M5NilcbmBgYCJ9 -->
+<pre class="r"><code>sizes(wc96)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiQ29tbXVuaXR5IHNpemVzXG4gMSAgMiAgMyBcbjc5IDgyIDIzIFxuIn0= -->
+<pre><code>Community sizes
+ 1  2  3 
+79 82 23 </code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc2l6ZXMod2MwNilcbmBgYCJ9 -->
+<pre class="r"><code>sizes(wc06)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiQ29tbXVuaXR5IHNpemVzXG4gMSAgMiAgMyBcbjYzIDcwIDYwIFxuIn0= -->
+<pre><code>Community sizes
+ 1  2  3 
+63 70 60 </code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc2l6ZXMod2MxNilcbmBgYCJ9 -->
+<pre class="r"><code>sizes(wc16)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiQ29tbXVuaXR5IHNpemVzXG4gIDEgICAyIFxuMTIwICA4MCBcbiJ9 -->
+<pre><code>Community sizes
+  1   2 
+120  80 </code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZzg2JGNvbW11bml0eTwtbWVtYmVyc2hpcCh3Yzg2KVxuZzg2JGNvbW11bml0eVxuYGBgIn0= -->
+<pre class="r"><code>g86$community&lt;-membership(wc86)
 g86$community</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgQWxnZXJpYSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgQXJnZW50aW5hIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAxIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIEF1c3RyYWxpYSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBBdXN0cmlhIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAyIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgQmFuZ2xhZGVzaCAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIEJhcmJhZG9zIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAxIFxuICAgICAgICAgICAgICAgICAgIEJlbGdpdW0tTHV4ZW1ib3VyZyAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgQmVsaXplIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAxIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIEJyYXppbCAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIEJ1bGdhcmlhIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAzIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICBDYW1lcm9vbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgQ2FuYWRhIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAxIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBDaGlsZSAgICAgICAgICAgICAgICAgIENoaW5hLCBIb25nIEtvbmcgU0FSIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAxIFxuICAgICAgICAgICAgQ2hpbmEsIFRhaXdhbiBQcm92aW5jZSBvZiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIENvbG9tYmlhIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAxIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgQ29zdGEgUmljYSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBDdWJhIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAzIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIEN5cHJ1cyAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBEZW5tYXJrIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAxIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBFZ3lwdCAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBGaWppIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAyIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgRmlubGFuZCAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgRnJhbmNlIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAyIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIEdyZWVjZSAgICAgICAgICAgICAgICAgICAgICAgICAgICBHdWFkZWxvdXBlIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAyIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIEd1YXRlbWFsYSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIEhvbmR1cmFzIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAxIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgSHVuZ2FyeSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIEluZGlhIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMyAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAzIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIEluZG9uZXNpYSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBJcmVsYW5kIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAyIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIElzcmFlbCAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIEl0YWx5IFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAyIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgSmFtYWljYSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIEphcGFuIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAxIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIEpvcmRhbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIEtlbnlhIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAxIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIEt1d2FpdCAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgTWFsYXdpIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAyIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICBNYWxheXNpYSAgICAgICAgICAgICAgICAgICAgICAgICAgICBNYXJ0aW5pcXVlIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAyIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIE1leGljbyAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBNb3JvY2NvIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAyIFxuICAgICAgICAgICAgICAgICAgICAgICAgICBOZXRoZXJsYW5kcyAgICAgICAgIE5ldGhlcmxhbmRzIEFudGlsbGVzIChmb3JtZXIpIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAxIFxuICAgICAgICAgICAgICAgICAgICAgICAgICBOZXcgWmVhbGFuZCAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBOaWdlcmlhIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAyIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIE5vcndheSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBPbWFuIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAxIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFBhbmFtYSAgICAgICAgICAgICAgICAgICAgICBQYXB1YSBOZXcgR3VpbmVhIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAxIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICBQYXJhZ3VheSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBQZXJ1IFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAxIFxuICAgICAgICAgICAgICAgICAgICAgICAgICBQaGlsaXBwaW5lcyAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgUG9sYW5kIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAzIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICBQb3J0dWdhbCAgICAgICAgICAgICAgICAgICAgIFJlcHVibGljIG9mIEtvcmVhIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAxIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgUlxceGU5dW5pb24gICAgICAgICAgICAgICAgICAgICAgICAgIFNhdWRpIEFyYWJpYSBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDIgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMSBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFNlbmVnYWwgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFNpbmdhcG9yZSBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDMgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMSBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgU3BhaW4gICAgICAgICAgICAgICAgICAgICAgICAgICAgIFNyaSBMYW5rYSBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDIgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMSBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBTd2VkZW4gICAgICAgICAgICAgICAgICAgICAgICAgICBTd2l0emVybGFuZCBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDEgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMiBcbiAgICAgICAgICAgICAgICAgU3lyaWFuIEFyYWIgUmVwdWJsaWMgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBUaGFpbGFuZCBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDIgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMSBcbiAgICAgICAgICAgICAgICAgIFRyaW5pZGFkIGFuZCBUb2JhZ28gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFR1cmtleSBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDEgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMSBcbiAgICAgICAgICAgICAgICAgICAgICAgVW5pdGVkIEtpbmdkb20gICAgICAgICAgICAgIFVuaXRlZCBTdGF0ZXMgb2YgQW1lcmljYSBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDIgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMSBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFVydWd1YXkgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgVVNTUiBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDEgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMyBcbiAgIFZlbmV6dWVsYSAoQm9saXZhcmlhbiBSZXB1YmxpYyBvZikgICAgICAgICAgICAgICAgICAgICAgICAgIFl1Z29zbGF2IFNGUiBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDEgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMyBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgWmltYmFid2UgICAgICBCb2xpdmlhIChQbHVyaW5hdGlvbmFsIFN0YXRlIG9mKSBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDQgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMSBcbiAgICAgICAgICAgICAgICAgICAgICBDaGluYSwgbWFpbmxhbmQgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBEamlib3V0aSBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDEgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMiBcbiAgICAgICAgICAgSXJhbiAoSXNsYW1pYyBSZXB1YmxpYyBvZikgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgTGViYW5vbiBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDEgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMiBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgTGlieWEgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBQYWtpc3RhbiBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDIgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMSBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFJvbWFuaWEgICAgICAgICAgICAgICAgICAgICAgICAgIFNvdXRoIEFmcmljYSBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDMgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgNCBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFR1bmlzaWEgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgQmFocmFpbiBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDIgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMSBcbiAgICAgICAgICAgICAgICAgICAgICAgQ3plY2hvc2xvdmFraWEgRGVtb2NyYXRpYyBQZW9wbGUncyBSZXB1YmxpYyBvZiBLb3JlYSBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDMgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMyBcbiAgICAgICAgICAgICAgICAgICAgICAgICBFdGhpb3BpYSBQRFIgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgSXJhcSBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDEgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMSBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICBNYXVyaXRpdXMgICAgICAgICAgICAgICAgICAgICAgICAgTmV3IENhbGVkb25pYSBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDEgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMiBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgUWF0YXIgICAgICAgICAgICAgICAgICBVbml0ZWQgQXJhYiBFbWlyYXRlcyBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDIgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMSBcbiAgICAgICAgICAgICAgICAgICAgIFVuc3BlY2lmaWVkIEFyZWEgICAgICAgICAgICAgICAgICAgICAgICAgICBBZmdoYW5pc3RhbiBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDMgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMyBcbiAgICAgRGVtb2NyYXRpYyBSZXB1YmxpYyBvZiB0aGUgQ29uZ28gICAgICAgICAgICAgICAgICAgICAgRnJlbmNoIFBvbHluZXNpYSBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDIgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMiBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBHdWluZWEgICAgICAgICAgICAgICAgICAgICAgICBTdWRhbiAoZm9ybWVyKSBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDIgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMSBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBBbmdvbGEgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBHYWJvbiBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDEgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMiBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgUHVlcnRvIFJpY28gICAgICAgICAgICAgICAgICAgICAgQ2hpbmEsIE1hY2FvIFNBUiBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDUgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgNiBcbiAgICAgICAgICAgICAgICAgICAgICAgIEZhcm9lIElzbGFuZHMgICAgICAgICAgICAgICAgICAgICAgICAgICAgIEdyZWVubGFuZCBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDcgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgOCBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIEljZWxhbmQgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgQW5kb3JyYSBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDEgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMiBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgQmVuaW4gICAgICAgICAgICAgICAgICAgICAgICAgIEJ1cmtpbmEgRmFzbyBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDIgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgOSBcbiAgICAgICAgICAgICBDZW50cmFsIEFmcmljYW4gUmVwdWJsaWMgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBDb25nbyBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMTAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAxMSBcbiAgICAgICAgICAgICAgICAgICAgIENcXHhmNHRlIGQnSXZvaXJlICAgICAgICAgICAgICAgICAgICAgICAgIEZyZW5jaCBHdWlhbmEgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAyICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMTIgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBNYWxpICAgICAgICAgICAgICAgICAgICAgICAgICAgIE1hdXJpdGFuaWEgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAyICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDIgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIE5pZ2VyICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFRvZ28gXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDEzICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMTQgXG4gICAgICAgICAgICAgICAgICAgICAgICAgIEVsIFNhbHZhZG9yICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgTmVwYWwgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAxICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMTUgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgIFZpZXQgTmFtICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgTWFsdGEgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAzICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDIgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICBTb21hbGlhICAgICAgICAgICAgICAgICAgICAgQnJ1bmVpIERhcnVzc2FsYW0gXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAxICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDEgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICBMaWJlcmlhICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgQXJ1YmEgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAxICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMTYgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgR2FtYmlhICAgICAgICAgICAgICAgICAgICAgICAgICAgIE1hZGFnYXNjYXIgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDE3ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDEgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICBNb3phbWJpcXVlICAgICAgICAgICBVbml0ZWQgUmVwdWJsaWMgb2YgVGFuemFuaWEgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA0ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMTggXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgR2licmFsdGFyICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIEJhaGFtYXMgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDE5ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMjAgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICBCZXJtdWRhICAgICAgICAgICAgICAgICAgICAgICAgQ2F5bWFuIElzbGFuZHMgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDIxICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMjIgXG4gICAgICAgICAgICAgICAgICAgRG9taW5pY2FuIFJlcHVibGljICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIEVjdWFkb3IgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDIzICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMjQgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIEdoYW5hICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgSGFpdGkgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDI1ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMjYgXG4gICAgICBQYWNpZmljIElzbGFuZHMgVHJ1c3QgVGVycml0b3J5ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgU3VyaW5hbWUgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDI3ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMjggXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgWmFtYmlhICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgTW9uZ29saWEgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDI5ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMzAgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgIEJvdHN3YW5hIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAzMSBcbiJ9 -->
+<!-- rnb-output-begin eyJkYXRhIjoiICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgQWxnZXJpYSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgQXJnZW50aW5hIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA2IFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIEF1c3RyYWxpYSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBBdXN0cmlhIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgNiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA2IFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgQmFuZ2xhZGVzaCAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIEJhcmJhZG9zIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgNSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAyIFxuICAgICAgICAgICAgICAgICAgIEJlbGdpdW0tTHV4ZW1ib3VyZyAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgQmVsaXplIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAyIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIEJyYXppbCAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIEJ1bGdhcmlhIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgNiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAzIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICBDYW1lcm9vbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgQ2FuYWRhIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgNCAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA2IFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBDaGlsZSAgICAgICAgICAgICAgICAgIENoaW5hLCBIb25nIEtvbmcgU0FSIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA1IFxuICAgICAgICAgICAgQ2hpbmEsIFRhaXdhbiBQcm92aW5jZSBvZiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIENvbG9tYmlhIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgNSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAyIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgQ29zdGEgUmljYSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBDdWJhIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAzIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIEN5cHJ1cyAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBEZW5tYXJrIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAyIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBFZ3lwdCAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBGaWppIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgNiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAyIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgRmlubGFuZCAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgRnJhbmNlIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgNiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA0IFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIEdyZWVjZSAgICAgICAgICAgICAgICAgICAgICAgICAgICBHdWFkZWxvdXBlIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA0IFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIEd1YXRlbWFsYSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIEhvbmR1cmFzIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAyIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgSHVuZ2FyeSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIEluZGlhIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAxIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIEluZG9uZXNpYSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBJcmVsYW5kIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgNSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAyIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIElzcmFlbCAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIEl0YWx5IFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAyIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgSmFtYWljYSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIEphcGFuIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA1IFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIEpvcmRhbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIEtlbnlhIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAyIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIEt1d2FpdCAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgTWFsYXdpIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA0IFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICBNYWxheXNpYSAgICAgICAgICAgICAgICAgICAgICAgICAgICBNYXJ0aW5pcXVlIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgNiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA0IFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIE1leGljbyAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBNb3JvY2NvIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAyIFxuICAgICAgICAgICAgICAgICAgICAgICAgICBOZXRoZXJsYW5kcyAgICAgICAgIE5ldGhlcmxhbmRzIEFudGlsbGVzIChmb3JtZXIpIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAyIFxuICAgICAgICAgICAgICAgICAgICAgICAgICBOZXcgWmVhbGFuZCAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBOaWdlcmlhIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgNiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAyIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIE5vcndheSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBPbWFuIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA2IFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFBhbmFtYSAgICAgICAgICAgICAgICAgICAgICBQYXB1YSBOZXcgR3VpbmVhIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA2IFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICBQYXJhZ3VheSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBQZXJ1IFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA1IFxuICAgICAgICAgICAgICAgICAgICAgICAgICBQaGlsaXBwaW5lcyAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgUG9sYW5kIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgNSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAxIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICBQb3J0dWdhbCAgICAgICAgICAgICAgICAgICAgIFJlcHVibGljIG9mIEtvcmVhIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA1IFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgUlxceGU5dW5pb24gICAgICAgICAgICAgICAgICAgICAgICAgIFNhdWRpIEFyYWJpYSBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDQgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgNiBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFNlbmVnYWwgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFNpbmdhcG9yZSBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDEgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgNSBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgU3BhaW4gICAgICAgICAgICAgICAgICAgICAgICAgICAgIFNyaSBMYW5rYSBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDIgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgNiBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBTd2VkZW4gICAgICAgICAgICAgICAgICAgICAgICAgICBTd2l0emVybGFuZCBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDIgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMiBcbiAgICAgICAgICAgICAgICAgU3lyaWFuIEFyYWIgUmVwdWJsaWMgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBUaGFpbGFuZCBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDIgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgNSBcbiAgICAgICAgICAgICAgICAgIFRyaW5pZGFkIGFuZCBUb2JhZ28gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFR1cmtleSBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDIgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMiBcbiAgICAgICAgICAgICAgICAgICAgICAgVW5pdGVkIEtpbmdkb20gICAgICAgICAgICAgIFVuaXRlZCBTdGF0ZXMgb2YgQW1lcmljYSBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDIgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgNSBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFVydWd1YXkgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgVVNTUiBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDYgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMyBcbiAgIFZlbmV6dWVsYSAoQm9saXZhcmlhbiBSZXB1YmxpYyBvZikgICAgICAgICAgICAgICAgICAgICAgICAgIFl1Z29zbGF2IFNGUiBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDIgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMSBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgWmltYmFid2UgICAgICBCb2xpdmlhIChQbHVyaW5hdGlvbmFsIFN0YXRlIG9mKSBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDQgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgNSBcbiAgICAgICAgICAgICAgICAgICAgICBDaGluYSwgbWFpbmxhbmQgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBEamlib3V0aSBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDYgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgNCBcbiAgICAgICAgICAgSXJhbiAoSXNsYW1pYyBSZXB1YmxpYyBvZikgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgTGViYW5vbiBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDYgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMiBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgTGlieWEgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBQYWtpc3RhbiBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDIgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgNSBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFJvbWFuaWEgICAgICAgICAgICAgICAgICAgICAgICAgIFNvdXRoIEFmcmljYSBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDEgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgNCBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFR1bmlzaWEgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgQmFocmFpbiBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDIgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgNSBcbiAgICAgICAgICAgICAgICAgICAgICAgQ3plY2hvc2xvdmFraWEgRGVtb2NyYXRpYyBQZW9wbGUncyBSZXB1YmxpYyBvZiBLb3JlYSBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDEgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMSBcbiAgICAgICAgICAgICAgICAgICAgICAgICBFdGhpb3BpYSBQRFIgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgSXJhcSBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDUgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgNiBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICBNYXVyaXRpdXMgICAgICAgICAgICAgICAgICAgICAgICAgTmV3IENhbGVkb25pYSBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDYgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgNCBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgUWF0YXIgICAgICAgICAgICAgICAgICBVbml0ZWQgQXJhYiBFbWlyYXRlcyBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDIgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgNiBcbiAgICAgICAgICAgICAgICAgICAgIFVuc3BlY2lmaWVkIEFyZWEgICAgICAgICAgICAgICAgICAgICAgICAgICBBZmdoYW5pc3RhbiBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDEgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMyBcbiAgICAgRGVtb2NyYXRpYyBSZXB1YmxpYyBvZiB0aGUgQ29uZ28gICAgICAgICAgICAgICAgICAgICAgRnJlbmNoIFBvbHluZXNpYSBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDQgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgNCBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBHdWluZWEgICAgICAgICAgICAgICAgICAgICAgICBTdWRhbiAoZm9ybWVyKSBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDQgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMiBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBBbmdvbGEgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBHYWJvbiBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDYgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgNCBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgUHVlcnRvIFJpY28gICAgICAgICAgICAgICAgICAgICAgQ2hpbmEsIE1hY2FvIFNBUiBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDYgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgNSBcbiAgICAgICAgICAgICAgICAgICAgICAgIEZhcm9lIElzbGFuZHMgICAgICAgICAgICAgICAgICAgICAgICAgICAgIEdyZWVubGFuZCBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDIgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMiBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIEljZWxhbmQgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgQW5kb3JyYSBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDIgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgNCBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgQmVuaW4gICAgICAgICAgICAgICAgICAgICAgICAgIEJ1cmtpbmEgRmFzbyBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDQgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgNCBcbiAgICAgICAgICAgICBDZW50cmFsIEFmcmljYW4gUmVwdWJsaWMgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBDb25nbyBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDQgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgNCBcbiAgICAgICAgICAgICAgICAgICAgIENcXHhmNHRlIGQnSXZvaXJlICAgICAgICAgICAgICAgICAgICAgICAgIEZyZW5jaCBHdWlhbmEgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA0ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDQgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBNYWxpICAgICAgICAgICAgICAgICAgICAgICAgICAgIE1hdXJpdGFuaWEgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA0ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDQgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIE5pZ2VyICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFRvZ28gXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA0ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDQgXG4gICAgICAgICAgICAgICAgICAgICAgICAgIEVsIFNhbHZhZG9yICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgTmVwYWwgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAyICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDEgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgIFZpZXQgTmFtICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgTWFsdGEgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA3ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDIgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICBTb21hbGlhICAgICAgICAgICAgICAgICAgICAgQnJ1bmVpIERhcnVzc2FsYW0gXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAyICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDUgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICBMaWJlcmlhICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgQXJ1YmEgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAyICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDIgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgR2FtYmlhICAgICAgICAgICAgICAgICAgICAgICAgICAgIE1hZGFnYXNjYXIgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA1ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDUgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICBNb3phbWJpcXVlICAgICAgICAgICBVbml0ZWQgUmVwdWJsaWMgb2YgVGFuemFuaWEgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA0ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDUgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgR2licmFsdGFyICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIEJhaGFtYXMgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAyICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDUgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICBCZXJtdWRhICAgICAgICAgICAgICAgICAgICAgICAgQ2F5bWFuIElzbGFuZHMgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA1ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDUgXG4gICAgICAgICAgICAgICAgICAgRG9taW5pY2FuIFJlcHVibGljICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIEVjdWFkb3IgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA1ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDUgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIEdoYW5hICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgSGFpdGkgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA1ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDUgXG4gICAgICBQYWNpZmljIElzbGFuZHMgVHJ1c3QgVGVycml0b3J5ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgU3VyaW5hbWUgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA1ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDUgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgWmFtYmlhICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgTW9uZ29saWEgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA1ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDggXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgIEJvdHN3YW5hIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgOSBcbiJ9 -->
 <pre><code>                              Algeria                             Argentina 
-                                    1                                     1 
+                                    2                                     6 
                             Australia                               Austria 
-                                    1                                     2 
+                                    6                                     6 
                            Bangladesh                              Barbados 
-                                    1                                     1 
+                                    5                                     2 
                    Belgium-Luxembourg                                Belize 
-                                    2                                     1 
+                                    2                                     2 
                                Brazil                              Bulgaria 
-                                    1                                     3 
+                                    6                                     3 
                              Cameroon                                Canada 
-                                    2                                     1 
+                                    4                                     6 
                                 Chile                  China, Hong Kong SAR 
-                                    1                                     1 
+                                    2                                     5 
             China, Taiwan Province of                              Colombia 
-                                    1                                     1 
+                                    5                                     2 
                            Costa Rica                                  Cuba 
-                                    1                                     3 
+                                    2                                     3 
                                Cyprus                               Denmark 
-                                    2                                     1 
+                                    2                                     2 
                                 Egypt                                  Fiji 
-                                    1                                     2 
+                                    6                                     2 
                               Finland                                France 
-                                    1                                     2 
+                                    6                                     4 
                                Greece                            Guadeloupe 
-                                    2                                     2 
+                                    2                                     4 
                             Guatemala                              Honduras 
-                                    1                                     1 
+                                    2                                     2 
                               Hungary                                 India 
-                                    3                                     3 
+                                    1                                     1 
                             Indonesia                               Ireland 
-                                    1                                     2 
+                                    5                                     2 
                                Israel                                 Italy 
-                                    1                                     2 
+                                    2                                     2 
                               Jamaica                                 Japan 
-                                    1                                     1 
+                                    2                                     5 
                                Jordan                                 Kenya 
-                                    1                                     1 
+                                    2                                     2 
                                Kuwait                                Malawi 
-                                    1                                     2 
+                                    2                                     4 
                              Malaysia                            Martinique 
-                                    1                                     2 
+                                    6                                     4 
                                Mexico                               Morocco 
-                                    1                                     2 
+                                    2                                     2 
                           Netherlands         Netherlands Antilles (former) 
-                                    2                                     1 
+                                    2                                     2 
                           New Zealand                               Nigeria 
-                                    1                                     2 
+                                    6                                     2 
                                Norway                                  Oman 
-                                    1                                     1 
+                                    2                                     6 
                                Panama                      Papua New Guinea 
-                                    1                                     1 
+                                    2                                     6 
                              Paraguay                                  Peru 
-                                    1                                     1 
+                                    2                                     5 
                           Philippines                                Poland 
-                                    1                                     3 
+                                    5                                     1 
                              Portugal                     Republic of Korea 
-                                    1                                     1 
+                                    2                                     5 
                            R\xe9union                          Saudi Arabia 
-                                    2                                     1 
+                                    4                                     6 
                               Senegal                             Singapore 
-                                    3                                     1 
+                                    1                                     5 
                                 Spain                             Sri Lanka 
-                                    2                                     1 
+                                    2                                     6 
                                Sweden                           Switzerland 
-                                    1                                     2 
+                                    2                                     2 
                  Syrian Arab Republic                              Thailand 
-                                    2                                     1 
+                                    2                                     5 
                   Trinidad and Tobago                                Turkey 
-                                    1                                     1 
+                                    2                                     2 
                        United Kingdom              United States of America 
-                                    2                                     1 
+                                    2                                     5 
                               Uruguay                                  USSR 
-                                    1                                     3 
+                                    6                                     3 
    Venezuela (Bolivarian Republic of)                          Yugoslav SFR 
-                                    1                                     3 
+                                    2                                     1 
                              Zimbabwe      Bolivia (Plurinational State of) 
-                                    4                                     1 
+                                    4                                     5 
                       China, mainland                              Djibouti 
-                                    1                                     2 
+                                    6                                     4 
            Iran (Islamic Republic of)                               Lebanon 
-                                    1                                     2 
+                                    6                                     2 
                                 Libya                              Pakistan 
-                                    2                                     1 
+                                    2                                     5 
                               Romania                          South Africa 
-                                    3                                     4 
+                                    1                                     4 
                               Tunisia                               Bahrain 
-                                    2                                     1 
+                                    2                                     5 
                        Czechoslovakia Democratic People's Republic of Korea 
-                                    3                                     3 
+                                    1                                     1 
                          Ethiopia PDR                                  Iraq 
-                                    1                                     1 
-                            Mauritius                         New Caledonia 
-                                    1                                     2 
-                                Qatar                  United Arab Emirates 
-                                    2                                     1 
-                     Unspecified Area                           Afghanistan 
-                                    3                                     3 
-     Democratic Republic of the Congo                      French Polynesia 
-                                    2                                     2 
-                               Guinea                        Sudan (former) 
-                                    2                                     1 
-                               Angola                                 Gabon 
-                                    1                                     2 
-                          Puerto Rico                      China, Macao SAR 
                                     5                                     6 
+                            Mauritius                         New Caledonia 
+                                    6                                     4 
+                                Qatar                  United Arab Emirates 
+                                    2                                     6 
+                     Unspecified Area                           Afghanistan 
+                                    1                                     3 
+     Democratic Republic of the Congo                      French Polynesia 
+                                    4                                     4 
+                               Guinea                        Sudan (former) 
+                                    4                                     2 
+                               Angola                                 Gabon 
+                                    6                                     4 
+                          Puerto Rico                      China, Macao SAR 
+                                    6                                     5 
                         Faroe Islands                             Greenland 
-                                    7                                     8 
-                              Iceland                               Andorra 
-                                    1                                     2 
-                                Benin                          Burkina Faso 
-                                    2                                     9 
-             Central African Republic                                 Congo 
-                                   10                                    11 
-                     C\xf4te d'Ivoire                         French Guiana 
-                                    2                                    12 
-                                 Mali                            Mauritania 
                                     2                                     2 
+                              Iceland                               Andorra 
+                                    2                                     4 
+                                Benin                          Burkina Faso 
+                                    4                                     4 
+             Central African Republic                                 Congo 
+                                    4                                     4 
+                     C\xf4te d'Ivoire                         French Guiana 
+                                    4                                     4 
+                                 Mali                            Mauritania 
+                                    4                                     4 
                                 Niger                                  Togo 
-                                   13                                    14 
+                                    4                                     4 
                           El Salvador                                 Nepal 
-                                    1                                    15 
+                                    2                                     1 
                              Viet Nam                                 Malta 
-                                    3                                     2 
+                                    7                                     2 
                               Somalia                     Brunei Darussalam 
-                                    1                                     1 
+                                    2                                     5 
                               Liberia                                 Aruba 
-                                    1                                    16 
+                                    2                                     2 
                                Gambia                            Madagascar 
-                                   17                                     1 
+                                    5                                     5 
                            Mozambique           United Republic of Tanzania 
-                                    4                                    18 
+                                    4                                     5 
                             Gibraltar                               Bahamas 
-                                   19                                    20 
+                                    2                                     5 
                               Bermuda                        Cayman Islands 
-                                   21                                    22 
+                                    5                                     5 
                    Dominican Republic                               Ecuador 
-                                   23                                    24 
+                                    5                                     5 
                                 Ghana                                 Haiti 
-                                   25                                    26 
+                                    5                                     5 
       Pacific Islands Trust Territory                              Suriname 
-                                   27                                    28 
+                                    5                                     5 
                                Zambia                              Mongolia 
-                                   29                                    30 
+                                    5                                     8 
                              Botswana 
-                                   31 </code></pre>
+                                    9 </code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubHMoZzg2KVxuYGBgIn0= -->
+<pre class="r"><code>ls(g86)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiRXJyb3IgaW4gbGlzdDJlbnYobGlzdCgxNDUsIFRSVUUsIGMoMCwgMSwgMSwgMSwgMSwgMSwgMSwgMSwgMSwgMSwgMSwgMSwgIDogXG4gIG5hbWVzKHgpIG11c3QgYmUgYSBjaGFyYWN0ZXIgdmVjdG9yIG9mIHRoZSBzYW1lIGxlbmd0aCBhcyB4XG4ifQ== -->
+<pre><code>Error in list2env(list(145, TRUE, c(0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,  : 
+  names(x) must be a character vector of the same length as x</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiUiBOb3RlYm9vayIKb3V0cHV0OiBodG1sX25vdGVib29rCi0tLQpgYGB7cn0KbGlicmFyeShpZ3JhcGgpCmBgYAoKCmBgYHtyfQpkZjg2PC1yZWFkLmNzdigib3V0cHV0X2RhdGExOTg2KHJlZ2lvbnMpLmNzdiIsaGVhZGVyID0gVCkKZGY5NjwtcmVhZC5jc3YoIm91dHB1dF9kYXRhMTk5NihyZWdpb25zKS5jc3YiLGhlYWRlcj1UKQpkZjA2PC1yZWFkLmNzdigib3V0cHV0X2RhdGEyMDA2KHJlZ2lvbnMpLmNzdiIsaGVhZGVyPVQpCmRmMTY8LXJlYWQuY3N2KCJvdXRwdXRfZGF0YTIwMTYocmVnaW9ucykuY3N2IixoZWFkZXI9VCkKYGBgCgpgYGB7cn0KZy44NjwtZGY4Nlt3aGljaChkZjg2JHdlaWdodD4xMDAwMDAwMCksXQpnODY8LWdyYXBoX2Zyb21fZGF0YV9mcmFtZShnLjg2KQpnLjk2PC1kZjk2W3doaWNoKGRmOTYkd2VpZ2h0PjEwMDAwMDAwKSxdCmc5NjwtZ3JhcGhfZnJvbV9kYXRhX2ZyYW1lKGcuOTYpCmcuMDY8LWRmMDZbd2hpY2goZGYwNiR3ZWlnaHQ+MTAwMDAwMDApLF0KZzA2PC1ncmFwaF9mcm9tX2RhdGFfZnJhbWUoZy4wNikKZy4xNjwtZGYxNlt3aGljaChkZjE2JHdlaWdodD4xMDAwMDAwMCksXQpnMTY8LWdyYXBoX2Zyb21fZGF0YV9mcmFtZShnLjE2KQoKYGBgCgpgYGB7cn0KYmV0d2Vlbjg2PC1iZXR3ZWVubmVzcyhnODYpCiNiZXR3ZWVuODYKYmV0d2Vlbjk2PC1iZXR3ZWVubmVzcyhnOTYpCiNiZXR3ZWVuOTYKYmV0d2VlbjA2PC1iZXR3ZWVubmVzcyhnMDYpCiNiZXR3ZWVuMDYKYmV0d2VlbjE2PC1iZXR3ZWVubmVzcyhnMTYpCiNiZXR3ZWVuMTYKeDE8LW1lYW4odW5uYW1lKGJldHdlZW44NikpCngyPC1tZWFuKHVubmFtZShiZXR3ZWVuOTYpKQp4MzwtbWVhbih1bm5hbWUoYmV0d2VlbjA2KSkKeDQ8LW1lYW4odW5uYW1lKGJldHdlZW4xNikpCngxCmF2ZXJhZ2VCZXR3ZWVuPC1kYXRhLmZyYW1lKGF2ZXJhZ2U9Yyh4MSx4Mix4Myx4NCkseWVhcj1jKCIxOTg2IiwiMTk5NiIsIjIwMDYiLCIyMDE2IikpCmBgYApgYGB7cn0KbGlicmFyeShnZ3Bsb3QyKQpnZ3Bsb3QoZGF0YT1hdmVyYWdlQmV0d2VlbixhZXMoeD15ZWFyLHk9YXZlcmFnZSkpICsKICBnZW9tX2JhcihzdGF0PSJpZGVudGl0eSIpICsgZ2d0aXRsZSgiQXZlcmFnZSBiZXR3ZWVubmVzcyBvdmVyIGZvdXIgZGVjYWRlcyIpCmBgYAoKVGhpcyBzdWdnZXN0cyB0aGF0IGFzIHRoZSB5ZWFycyBoYXZlIHByb2dyZXNzZWQgbW9yZSBjb3VudHJpZXMgaGF2ZSBkZXZsb3BlZCBoaWdoZXIgYmV0d2VlbmVzcyByZXN1bHRpbmcgaW4gbW9yZSBkZWZpbmVkIHRyYWRlIHBhdHRlcm5zLihpLmUgYSBoYW5kZnVsIG9mIGNvdW50cmllcyB2ZXJ5IGxvdyBiZXR3ZWVuZXNzIG1lYW5zIHRoZXkgYXJlIHJlbW92ZWQgZnJvbSB0cmFkaW5nIGJ1dCBzaW5jZSB0aGUgYXZlcmFnZSBhcyBpbmNyZWFzZWQgb3ZlciB0aGUgeWVhcnMgaXQgaXMgc3VnZ2VzdGluZyB0aGF0IGNvdW50cmllcyBhcmUgYmVjb21pbmcgbW9yZSBpbnZvdmxlZCBpbiB0cmFkaW5nKGVuZm9yY2VzIGdsb2JhbGl6YXRpb24pICkKYGBge3J9CmNsb3NlODY8LWNsb3NlbmVzcyhnODYpCiNiZXR3ZWVuODYKY2xvc2U5NjwtY2xvc2VuZXNzKGc5NikKI2JldHdlZW45NgpjbG9zZTA2PC1jbG9zZW5lc3MoZzA2KQojYmV0d2VlbjA2CmNsb3NlMTY8LWNsb3NlbmVzcyhnMTYpCiNiZXR3ZWVuMTYKeTE8LW1lYW4odW5uYW1lKGNsb3NlODYpKQp5MjwtbWVhbih1bm5hbWUoY2xvc2U5NikpCnkzPC1tZWFuKHVubmFtZShjbG9zZTA2KSkKeTQ8LW1lYW4odW5uYW1lKGNsb3NlMTYpKQphdmVyYWdlY2xvc2U8LWRhdGEuZnJhbWUoYXZlcmFnZT1jKHkxLHkyLHkzLHk0KSx5ZWFyPWMoIjE5ODYiLCIxOTk2IiwiMjAwNiIsIjIwMTYiKSkKYGBgCgoKYGBge3J9CmxpYnJhcnkoZ2dwbG90MikKZ2dwbG90KGRhdGE9YXZlcmFnZWNsb3NlLGFlcyh4PXllYXIseT1hdmVyYWdlKSkgKwogIGdlb21fYmFyKHN0YXQ9ImlkZW50aXR5IikgKyBnZ3RpdGxlKCJBdmVyYWdlIGNsb3NlbmVzcyBvdmVyIGZvdXIgZGVjYWRlcyIpCmBgYApUaGlzIHNob3dzIHRoYXQgb3ZlciB0aGUgZGVjYWRlcyBjb3VudHJpZXMgaGF2ZSBiZWNvbWUgbW9yZSBjb25uZWN0ZWQgcmVzdWx0aW5nIGluIG1vcmUgZGlyZWN0IHRyYWRlIHBhdHRlcm5zCgpgYGB7cn0KY29tbXVuPC13YWxrdHJhcC5jb21tdW5pdHkoZzg2KQpnODYkY29tbXVuaXR5PC1tZW1iZXJzaGlwKGNvbW11bikKCmBgYAoK</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiUiBOb3RlYm9vayIKb3V0cHV0OiBodG1sX25vdGVib29rCi0tLQpgYGB7cn0KbGlicmFyeShpZ3JhcGgpCmBgYAoKCmBgYHtyfQpkZjg2PC1yZWFkLmNzdigib3V0cHV0X2RhdGExOTg2KHJlZ2lvbnMpLmNzdiIsaGVhZGVyID0gVCkKZGY5NjwtcmVhZC5jc3YoIm91dHB1dF9kYXRhMTk5NihyZWdpb25zKS5jc3YiLGhlYWRlcj1UKQpkZjA2PC1yZWFkLmNzdigib3V0cHV0X2RhdGEyMDA2KHJlZ2lvbnMpLmNzdiIsaGVhZGVyPVQpCmRmMTY8LXJlYWQuY3N2KCJvdXRwdXRfZGF0YTIwMTYocmVnaW9ucykuY3N2IixoZWFkZXI9VCkKYGBgCgpgYGB7cn0KZy44NjwtZGY4Nlt3aGljaChkZjg2JHdlaWdodD4xMDAwMDAwMCksXQpnODY8LWdyYXBoX2Zyb21fZGF0YV9mcmFtZShnLjg2KQpnLjk2PC1kZjk2W3doaWNoKGRmOTYkd2VpZ2h0PjEwMDAwMDAwKSxdCmc5NjwtZ3JhcGhfZnJvbV9kYXRhX2ZyYW1lKGcuOTYpCmcuMDY8LWRmMDZbd2hpY2goZGYwNiR3ZWlnaHQ+MTAwMDAwMDApLF0KZzA2PC1ncmFwaF9mcm9tX2RhdGFfZnJhbWUoZy4wNikKZy4xNjwtZGYxNlt3aGljaChkZjE2JHdlaWdodD4xMDAwMDAwMCksXQpnMTY8LWdyYXBoX2Zyb21fZGF0YV9mcmFtZShnLjE2KQoKYGBgCgpgYGB7cn0KYmV0d2Vlbjg2PC1iZXR3ZWVubmVzcyhnODYpCiNiZXR3ZWVuODYKY29sODY8LWRhdGEuZnJhbWUodW5uYW1lKGJldHdlZW44NikpCmNvdW50ODY8LWFwcGx5KGNvbDg2LDIsZnVuY3Rpb24oYylzdW0oYz09MCkpCmNvdW50ODYKYmV0d2Vlbjk2PC1iZXR3ZWVubmVzcyhnOTYpCiNiZXR3ZWVuOTYKY29sOTY8LWRhdGEuZnJhbWUodW5uYW1lKGJldHdlZW45NikpCmNvdW50OTY8LWFwcGx5KGNvbDk2LDIsZnVuY3Rpb24oYylzdW0oYz09MCkpCmNvdW50OTYKYmV0d2VlbjA2PC1iZXR3ZWVubmVzcyhnMDYpCiNiZXR3ZWVuMDYKY29sMDY8LWRhdGEuZnJhbWUodW5uYW1lKGJldHdlZW4wNikpCmNvdW50MDY8LWFwcGx5KGNvbDA2LDIsZnVuY3Rpb24oYylzdW0oYz09MCkpCmNvdW50MDYKYmV0d2VlbjE2PC1iZXR3ZWVubmVzcyhnMTYpCiNiZXR3ZWVuMTYKY29sMTY8LWRhdGEuZnJhbWUodW5uYW1lKGJldHdlZW4xNikpCmNvdW50MTY8LWFwcGx5KGNvbDE2LDIsZnVuY3Rpb24oYylzdW0oYz09MCkpCmNvdW50MTYKeDE8LW1lYW4odW5uYW1lKGJldHdlZW44NikpCngyPC1tZWFuKHVubmFtZShiZXR3ZWVuOTYpKQp4MzwtbWVhbih1bm5hbWUoYmV0d2VlbjA2KSkKeDQ8LW1lYW4odW5uYW1lKGJldHdlZW4xNikpCmF2ZXJhZ2VCZXR3ZWVuPC1kYXRhLmZyYW1lKGF2ZXJhZ2U9Yyh4MSx4Mix4Myx4NCkseWVhcj1jKCIxOTg2IiwiMTk5NiIsIjIwMDYiLCIyMDE2IikpCmBgYApgYGB7cn0KbGlicmFyeShnZ3Bsb3QyKQpnZ3Bsb3QoZGF0YT1hdmVyYWdlQmV0d2VlbixhZXMoeD15ZWFyLHk9YXZlcmFnZSkpICsKICBnZW9tX2JhcihzdGF0PSJpZGVudGl0eSIpICsgZ2d0aXRsZSgiQXZlcmFnZSBiZXR3ZWVubmVzcyBvdmVyIGZvdXIgZGVjYWRlcyIpCmBgYAoKVGhpcyBzdWdnZXN0cyB0aGF0IGFzIHRoZSB5ZWFycyBoYXZlIHByb2dyZXNzZWQgbW9yZSBjb3VudHJpZXMgaGF2ZSBkZXZsb3BlZCBoaWdoZXIgYmV0d2VlbmVzcyByZXN1bHRpbmcgaW4gbW9yZSBkZWZpbmVkIHRyYWRlIHBhdHRlcm5zLihpLmUgYSBoYW5kZnVsIG9mIGNvdW50cmllcyB2ZXJ5IGxvdyBiZXR3ZWVuZXNzIG1lYW5zIHRoZXkgYXJlIHJlbW92ZWQgZnJvbSB0cmFkaW5nIGJ1dCBzaW5jZSB0aGUgYXZlcmFnZSBhcyBpbmNyZWFzZWQgb3ZlciB0aGUgeWVhcnMgaXQgaXMgc3VnZ2VzdGluZyB0aGF0IGNvdW50cmllcyBhcmUgYmVjb21pbmcgbW9yZSBpbnZvdmxlZCBpbiB0cmFkaW5nKGVuZm9yY2VzIGdsb2JhbGl6YXRpb24pICkKYGBge3J9CmNsb3NlODY8LWNsb3NlbmVzcyhnODYpCiNiZXR3ZWVuODYKY2xvc2U5NjwtY2xvc2VuZXNzKGc5NikKI2JldHdlZW45NgpjbG9zZTA2PC1jbG9zZW5lc3MoZzA2KQojYmV0d2VlbjA2CmNsb3NlMTY8LWNsb3NlbmVzcyhnMTYpCiNiZXR3ZWVuMTYKeTE8LW1lYW4odW5uYW1lKGNsb3NlODYpKQp5MjwtbWVhbih1bm5hbWUoY2xvc2U5NikpCnkzPC1tZWFuKHVubmFtZShjbG9zZTA2KSkKeTQ8LW1lYW4odW5uYW1lKGNsb3NlMTYpKQphdmVyYWdlY2xvc2U8LWRhdGEuZnJhbWUoYXZlcmFnZT1jKHkxLHkyLHkzLHk0KSx5ZWFyPWMoIjE5ODYiLCIxOTk2IiwiMjAwNiIsIjIwMTYiKSkKYGBgCgoKYGBge3J9CmdncGxvdChkYXRhPWF2ZXJhZ2VjbG9zZSxhZXMoeD15ZWFyLHk9YXZlcmFnZSkpICsKICBnZW9tX2JhcihzdGF0PSJpZGVudGl0eSIpICsgZ2d0aXRsZSgiQXZlcmFnZSBjbG9zZW5lc3Mgb3ZlciBmb3VyIGRlY2FkZXMiKQpgYGAKVGhpcyBzaG93cyB0aGF0IG92ZXIgdGhlIGRlY2FkZXMgY291bnRyaWVzIGhhdmUgYmVjb21lIG1vcmUgY29ubmVjdGVkIHJlc3VsdGluZyBpbiBtb3JlIGRpcmVjdCB0cmFkZSBwYXR0ZXJucwoKYGBge3J9CnJhbms4NjwtcGFnZS5yYW5rKGc4NikKI2JldHdlZW44NgpyYW5rOTY8LXBhZ2UucmFuayhnOTYpCiNiZXR3ZWVuOTYKcmFuazA2PC1wYWdlLnJhbmsoZzA2KQojYmV0d2VlbjA2CnJhbmsxNjwtcGFnZS5yYW5rKGcxNikKI2JldHdlZW4xNgoKejE8LW1lYW4odW5uYW1lKHJhbms4NiR2ZWN0b3IpKQp6MjwtbWVhbih1bm5hbWUocmFuazk2JHZlY3RvcikpCnozPC1tZWFuKHVubmFtZShyYW5rMDYkdmVjdG9yKSkKejQ8LW1lYW4odW5uYW1lKHJhbmsxNiR2ZWN0b3IpKQphdmVyYWdlUmFuazwtZGF0YS5mcmFtZShhdmVyYWdlPWMoejEsejIsejMsejQpLHllYXI9YygiMTk4NiIsIjE5OTYiLCIyMDA2IiwiMjAxNiIpKQpgYGAKYGBge3J9CmdncGxvdChkYXRhPWF2ZXJhZ2VSYW5rLGFlcyh4PXllYXIseT1hdmVyYWdlKSkgKwogIGdlb21fYmFyKHN0YXQ9ImlkZW50aXR5IikgKyBnZ3RpdGxlKCJBdmVyYWdlIHBhZ2UgcmFuayBvdmVyIGZvdXIgZGVjYWRlcyIpCmBgYApgYGB7cn0Kd2M4Njwtd2Fsa3RyYXAuY29tbXVuaXR5KGc4NixzdGVwcyA9IDIwKQp3Yzk2PC13YWxrdHJhcC5jb21tdW5pdHkoZzk2LHN0ZXBzPTIwKQp3YzA2PC13YWxrdHJhcC5jb21tdW5pdHkoZzA2LHN0ZXBzPTIwKQp3YzE2PC13YWxrdHJhcC5jb21tdW5pdHkoZzE2LHN0ZXBzID0gMjApCnNpemVzKHdjODYpCnNpemVzKHdjOTYpCnNpemVzKHdjMDYpCnNpemVzKHdjMTYpCgpgYGAKCmBgYHtyfQpnODYkY29tbXVuaXR5PC1tZW1iZXJzaGlwKHdjODYpCmc4NiRjb21tdW5pdHkKCmBgYAoK</div>
 
 
 
