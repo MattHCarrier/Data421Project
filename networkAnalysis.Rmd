@@ -117,7 +117,46 @@ sizes(wc16)
 
 ```{r}
 g86$community<-membership(wc86)
-g86$community
+
+n<-max(g86$community)
+group<-data.frame(c(g86$community))
+
+for (i in 1:n){
+
+print(subset(group,c(g86$community)==i))
+}
 
 ```
+```{r}
+g96$community<-membership(wc96)
 
+n<-max(g96$community)
+group1<-data.frame(c(g96$community))
+
+for (i in 1:n){
+
+print(subset(group1,c(g96$community)==i))
+}
+```
+```{r}
+g06$community<-membership(wc06)
+
+n<-max(g06$community)
+group2<-data.frame(c(g06$community))
+
+for (i in 1:n){
+
+print(subset(group2,c(g06$community)==i))
+}
+```
+```{r}
+g16$community<-membership(wc16)
+
+n<-max(g16$community)
+group3<-data.frame(c(g16$community))
+
+for (i in 1:n){
+
+print(subset(group3,c(g16$community)==i))
+}
+```
