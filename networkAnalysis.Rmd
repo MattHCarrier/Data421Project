@@ -12,6 +12,11 @@ df86<-read.csv("output_data1986(regions).csv",header = T)
 df96<-read.csv("output_data1996(regions).csv",header=T)
 df06<-read.csv("output_data2006(regions).csv",header=T)
 df16<-read.csv("output_data2016(regions).csv",header=T)
+totalExport86<-read.csv("totalexports1986.csv",header=T)
+totalExport96<-read.csv("totalexports1996.csv",header=T)
+totalExport06<-read.csv("totalexports2006.csv",header=T)
+totalExport16<-read.csv("totalexports2016.csv",header=T)
+
 ```
 
 ```{r}
@@ -23,6 +28,13 @@ g.06<-df06[which(df06$weight>10000000),]
 g06<-graph_from_data_frame(g.06)
 g.16<-df16[which(df16$weight>10000000),]
 g16<-graph_from_data_frame(g.16)
+
+```
+```{r}
+g86$totalExport<-totalExport86
+g96$totalExport<-totalExport96
+g06$totalExport<-totalExport06
+g16$totalExport<-totalExport16
 
 ```
 
@@ -116,20 +128,23 @@ sizes(wc16)
 ```
 
 ```{r}
-g86$community<-membership(wc86)
 
+```
+
+```{r}
+V(g86)$community<-membership(wc86)
+nrow(totalExport86)
 n<-max(g86$community)
 group<-data.frame(c(g86$community))
 
 for (i in 1:n){
 
-print(subset(group,c(g86$community)==i))
+(subset(group,c(g86$community)==i))
+
 }
 
 ```
 ```{r}
-g96$community<-membership(wc96)
-
 n<-max(g96$community)
 group1<-data.frame(c(g96$community))
 
@@ -145,18 +160,25 @@ n<-max(g06$community)
 group2<-data.frame(c(g06$community))
 
 for (i in 1:n){
-
-print(subset(group2,c(g06$community)==i))
+df<-(subset(group2,c(g06$community)==i))
 }
+df[]
 ```
+
 ```{r}
 g16$community<-membership(wc16)
 
 n<-max(g16$community)
 group3<-data.frame(c(g16$community))
-
+group3TotalExport<-data.frame(c(g16$totalExport))
 for (i in 1:n){
 
-print(subset(group3,c(g16$community)==i))
+df[i]<-(subset(group3,c(g16$community)==i))
 }
+df[2]
 ```
+```{r}
+
+```
+
+
