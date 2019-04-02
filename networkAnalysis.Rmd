@@ -49,6 +49,7 @@ ggplot(data=degreeDensity,aes(x=year,y=average)) +
 
 ```
 
+
 ```{r}
 between86<-betweenness(g86)
 #between86
@@ -76,6 +77,9 @@ x3<-mean(unname(between06))
 x4<-mean(unname(between16))
 averageBetween<-data.frame(average=c(x1,x2,x3,x4),year=c("1986","1996","2006","2016"))
 ```
+
+
+
 ```{r}
 
 ggplot(data=averageBetween,aes(x=year,y=average)) +
@@ -130,7 +134,7 @@ ggplot(data=averageRank,aes(x=year,y=average)) +
 wc86<-walktrap.community(g86,steps = 20)
 wc96<-walktrap.community(g96,steps=20)
 wc06<-walktrap.community(g06,steps=20)
-wc16<-walktrap.community(g16,steps = 20)
+wc16<-walktrap.community(g16,steps =20)
 sizes(wc86)
 sizes(wc96)
 sizes(wc06)
@@ -144,7 +148,8 @@ sizes(wc16)
 
 ```{r}
 V(g86)$community<-membership(wc86)
-nrow(totalExport86)
+V(g86)[degree(g86)>=max(degree(g86)/1)]
+
 n<-max(g86$community)
 group<-data.frame(c(g86$community))
 
