@@ -20,8 +20,7 @@ totalExport16<-read.csv("totalexports2016.csv",header=T)
 ```
 
 ```{r}
-g.86<-df86[which(df86$weight>10000000),]
-g86<-graph_from_data_frame(g.86)
+g86<-graph_from_data_frame(df86)
 g.96<-df96[which(df96$weight>10000000),]
 g96<-graph_from_data_frame(g.96)
 g.06<-df06[which(df06$weight>10000000),]
@@ -31,12 +30,17 @@ g16<-graph_from_data_frame(g.16)
 
 ```
 ```{r}
+g86
+```
+
+```{r}
 g86$totalExport<-totalExport86
 g96$totalExport<-totalExport96
 g06$totalExport<-totalExport06
 g16$totalExport<-totalExport16
 
 ```
+
 ```{r}
 dense86<-graph.density(g86)
 dense96<-graph.density(g96)
@@ -143,7 +147,8 @@ sizes(wc16)
 ```
 
 ```{r}
-
+options(max.print = 1500)
+V(g86)$name
 ```
 
 ```{r}
@@ -171,7 +176,7 @@ print(subset(group1,c(g96$community)==i))
 ```
 ```{r}
 g06$community<-membership(wc06)
-
+go06$totalExport<-totalExport06
 n<-max(g06$community)
 group2<-data.frame(c(g06$community))
 
