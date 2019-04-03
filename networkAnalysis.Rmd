@@ -181,7 +181,7 @@ group3.mean<-sum/group3.n
 ```{r}
 averageRank<-data.frame(average=c(group1.mean,group2.mean,group3.mean),community=c("1","2","3"))
 ggplot(data=averageRank,aes(x=community,y=average)) +
-  geom_bar(stat="identity") + ggtitle("Average export value per community for the yeah 1986")
+  geom_bar(stat="identity") + ggtitle("Average export value per community for the year 1986")
 ```
 
 ```{r}
