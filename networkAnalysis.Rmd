@@ -16,28 +16,22 @@ totalExport86<-read.csv("totalexports1986.csv",header=T)
 totalExport96<-read.csv("totalexports1996.csv",header=T)
 totalExport06<-read.csv("totalexports2006.csv",header=T)
 totalExport16<-read.csv("totalexports2016.csv",header=T)
-
+totalExport86
 ```
 
 ```{r}
-g86<-graph_from_data_frame(df86)
-g.96<-df96[which(df96$weight>10000000),]
-g96<-graph_from_data_frame(g.96)
-g.06<-df06[which(df06$weight>10000000),]
-g06<-graph_from_data_frame(g.06)
-g.16<-df16[which(df16$weight>10000000),]
-g16<-graph_from_data_frame(g.16)
-
-```
-```{r}
-g86
+g86<-simplify(graph_from_data_frame(df86),remove.loops = T)
+g96<-simplify(graph_from_data_frame(df96),remove.loops = T)
+g06<-simplify(graph_from_data_frame(df06),remove.loops=T)
+g16<-simplify(graph_from_data_frame(df16),remove.loops=T)
 ```
 
+
 ```{r}
-g86$totalExport<-totalExport86
-g96$totalExport<-totalExport96
-g06$totalExport<-totalExport06
-g16$totalExport<-totalExport16
+V(g86)$totalExport<-totalExport86$totalexportvalue
+V(g96)$totalExport<-totalExport96$totalexportvalue
+V(g06)$totalExport<-totalExport06$totalexportvalue
+V(g16)$totalExport<-totalExport16$totalexportvalue
 
 ```
 
@@ -46,11 +40,20 @@ dense86<-graph.density(g86)
 dense96<-graph.density(g96)
 dense06<-graph.density(g06)
 dense16<-graph.density(g16)
+```
+```{r}
+hist(degree_distribution(g86))
+hist(degree_distribution(g96))
+hist(degree_distribution(g06))
+hist(degree_distribution(g16))
+```
+
+
+```{r}
 degreeDensity<-data.frame(average=c(dense86,dense96,dense06,dense16),year=c("1986","1996","2006","2016"))
 library(ggplot2)
 ggplot(data=degreeDensity,aes(x=year,y=average)) +
   geom_bar(stat="identity") + ggtitle("Degree density over four decades")
-
 ```
 
 
@@ -134,6 +137,11 @@ averageRank<-data.frame(average=c(z1,z2,z3,z4),year=c("1986","1996","2006","2016
 ggplot(data=averageRank,aes(x=year,y=average)) +
   geom_bar(stat="identity") + ggtitle("Average page rank over four decades")
 ```
+
+
+
+
+
 ```{r}
 wc86<-walktrap.community(g86,steps = 20)
 wc96<-walktrap.community(g96,steps=20)
@@ -146,60 +154,109 @@ sizes(wc16)
 
 ```
 
-```{r}
-options(max.print = 1500)
-V(g86)$name
-```
 
 ```{r}
 V(g86)$community<-membership(wc86)
-V(g86)[degree(g86)>=max(degree(g86)/1)]
-
-n<-max(g86$community)
-group<-data.frame(c(g86$community))
-
-for (i in 1:n){
-
-(subset(group,c(g86$community)==i))
-
+group1.86<-V(g86)$totalExport[which(V(g86)$community==1)]
+group2.86<-V(g86)$totalExport[which(V(g86)$community==2)]
+group3.86<-V(g86)$totalExport[which(V(g86)$community==3)]
+group1.n<-length(group1.86)
+group1.sum<-0
+for (i in 1:group1.n){
+  sum<-sum+group1.86[[i]]
 }
-
-```
-```{r}
-n<-max(g96$community)
-group1<-data.frame(c(g96$community))
-
-for (i in 1:n){
-
-print(subset(group1,c(g96$community)==i))
+group1.mean<-sum/group1.n
+group2.n<-length(group2.86)
+for (i in 1:group2.n){
+  sum<-sum+group2.86[[i]]
 }
-```
-```{r}
-g06$community<-membership(wc06)
-go06$totalExport<-totalExport06
-n<-max(g06$community)
-group2<-data.frame(c(g06$community))
-
-for (i in 1:n){
-df<-(subset(group2,c(g06$community)==i))
+group2.mean<-sum/group2.n
+group3.n<-length(group3.86)
+for (i in 1:group3.n){
+  sum<-sum+group3.86[[i]]
 }
-df[]
+group3.mean<-sum/group3.n
 ```
 
 ```{r}
-g16$community<-membership(wc16)
+averageRank<-data.frame(average=c(group1.mean,group2.mean,group3.mean),community=c("1","2","3"))
+ggplot(data=averageRank,aes(x=community,y=average)) +
+  geom_bar(stat="identity") + ggtitle("Average export value per community for the yeah 1986")
+```
 
-n<-max(g16$community)
-group3<-data.frame(c(g16$community))
-group3TotalExport<-data.frame(c(g16$totalExport))
-for (i in 1:n){
+```{r}
+V(g96)$community<-membership(wc96)
+group1.96<-V(g96)$totalExport[which(V(g96)$community==1)]
+group2.96<-V(g96)$totalExport[which(V(g96)$community==2)]
 
-df[i]<-(subset(group3,c(g16$community)==i))
+group1.n<-length(group1.96)
+group1.sum<-0
+for (i in 1:group1.n){
+  sum<-sum+group1.96[[i]]
 }
-df[2]
+group1.mean<-sum/group1.n
+group2.n<-length(group2.96)
+for (i in 1:group2.n){
+  sum<-sum+group2.96[[i]]
+}
+group2.mean<-sum/group2.n
+
+```
+
+```{r}
+averageRank<-data.frame(average=c(group1.mean,group2.mean),community=c("1","2"))
+ggplot(data=averageRank,aes(x=community,y=average)) +
+  geom_bar(stat="identity") + ggtitle("Average export value per community for the year 1996")
 ```
 ```{r}
+V(g06)$community<-membership(wc06)
+group1.06<-V(g06)$totalExport[which(V(g06)$community==1)]
+group2.06<-V(g06)$totalExport[which(V(g06)$community==2)]
+group3.06<-V(g06)$totalExport[which(V(g06)$community==3)]
+group1.n<-length(group1.06)
+group1.sum<-0
+for (i in 1:group1.n){
+  sum<-sum+group1.06[[i]]
+}
+group1.mean<-sum/group1.n
+group2.n<-length(group2.06)
+for (i in 1:group2.n){
+  sum<-sum+group2.06[[i]]
+}
+group2.mean<-sum/group2.n
+group3.n<-length(group3.06)
+for (i in 1:group3.n){
+  sum<-sum+group3.06[[i]]
+}
+group3.mean<-sum/group3.n
+```
+
+```{r}
+averageRank<-data.frame(average=c(group1.mean,group2.mean,group3.mean),community=c("1","2","3"))
+ggplot(data=averageRank,aes(x=community,y=average)) +
+  geom_bar(stat="identity") + ggtitle("Average export value per community for the year 2006")
+```
+```{r}
+V(g16)$community<-membership(wc16)
+group1.16<-V(g16)$totalExport[which(V(g16)$community==1)]
+group2.16<-V(g16)$totalExport[which(V(g16)$community==2)]
+
+group1.n<-length(group1.16)
+group1.sum<-0
+for (i in 1:group1.n){
+  sum<-sum+group1.16[[i]]
+}
+group1.mean<-sum/group1.n
+group2.n<-length(group2.16)
+for (i in 1:group2.n){
+  sum<-sum+group2.16[[i]]
+}
+group2.mean<-sum/group2.n
 
 ```
 
-
+```{r}
+averageRank<-data.frame(average=c(group1.mean,group2.mean),community=c("1","2"))
+ggplot(data=averageRank,aes(x=community,y=average)) +
+  geom_bar(stat="identity") + ggtitle("Average export value per community for the year 2016")
+```
