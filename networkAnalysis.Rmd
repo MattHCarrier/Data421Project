@@ -16,7 +16,6 @@ totalExport86<-read.csv("totalexports1986.csv",header=T)
 totalExport96<-read.csv("totalexports1996.csv",header=T)
 totalExport06<-read.csv("totalexports2006.csv",header=T)
 totalExport16<-read.csv("totalexports2016.csv",header=T)
-totalExport86
 ```
 
 ```{r}
@@ -42,10 +41,10 @@ dense06<-graph.density(g06)
 dense16<-graph.density(g16)
 ```
 ```{r}
-hist(degree_distribution(g86))
-hist(degree_distribution(g96))
-hist(degree_distribution(g06))
-hist(degree_distribution(g16))
+hist(degree(g86))
+hist(degree(g96))
+hist(degree(g06))
+hist(degree(g16))
 ```
 
 
@@ -228,18 +227,20 @@ V(g96)$community<-membership(wc96)
 group1.96<-V(g96)$totalExport[which(V(g96)$community==1)]
 group2.96<-V(g96)$totalExport[which(V(g96)$community==2)]
 
+names
 group1.n<-length(group1.96)
 group1.sum<-0
 for (i in 1:group1.n){
-  sum<-group1.sum+group1.96[[i]]
+ group1.sum<-group1.sum+group1.96[[i]]
 }
-group1.mean<-sum/group1.n
+group1.mean<-group1.sum/group1.n
 group2.n<-length(group2.96)
 group2.sum<-0
 for (i in 1:group2.n){
   group2.sum<-group2.sum+group2.96[[i]]
 }
 group2.mean<-group2.sum/group2.n
+group1.mean
 ```
 
 ```{r}
@@ -269,6 +270,7 @@ for (i in 1:group3.n){
   group3.sum<-group3.sum+group3.06[[i]]
 }
 group3.mean<-group3.sum/group3.n
+
 ```
 
 ```{r}
@@ -316,3 +318,57 @@ averageRank<-data.frame(average=c(group1.mean,group2.mean,group3.mean,group4.mea
 ggplot(data=averageRank,aes(x=community,y=average)) +
   geom_bar(stat="identity") + ggtitle("Average export value per community for the year 2016")
 ```
+```{r}
+regions86<-read.csv("regions1986.csv")
+regions96<-read.csv("regions1996.csv")
+regions06<-read.csv("regions2006.csv")
+regions16<-read.csv("regions2016.csv")
+```
+```{r}
+regions86$community<-membership(wc86)
+table(regions86$region,regions86$community)
+chisq.test(table(regions86$region,regions86$community))
+```
+
+
+```{r}
+regions96$community<-membership(wc96)
+table(regions96$region,regions96$community)
+chisq.test(table(regions96$region,regions96$community))
+```
+
+```{r}
+regions06$community<-membership(wc06)
+table(regions06$region,regions06$community)
+chisq.test(table(regions06$region,regions06$community))
+```
+
+```{r}
+regions16$community<-membership(wc16)
+table(regions16$region,regions16$community)
+chisq.test(table(regions16$region,regions16$community))
+```
+```{r}
+totalExport86$community<-membership(wc86)
+totalExport96$community<-membership(wc96)
+totalExport06$community<-membership(wc06)
+totalExport16$community<-membership(wc16)
+```
+
+```{r}
+table(totalExport86$totalexportvalue,totalExport86$community)
+chisq.test(table(totalExport86$totalexportvalue,totalExport86$community))
+```
+```{r}
+table(totalExport96$totalexportvalue,totalExport96$community)
+chisq.test(table(totalExport96$totalexportvalue,totalExport96$community))
+```
+```{r}
+table(totalExport06$totalexportvalue,totalExport06$community)
+chisq.test(table(totalExport06$totalexportvalue,totalExport06$community))
+```
+```{r}
+table(totalExport16$totalexportvalue,totalExport16$community)
+chisq.test(table(totalExport16$totalexportvalue,totalExport16$community))
+```
+
